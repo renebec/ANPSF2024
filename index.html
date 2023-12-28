@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ANPSF2024</title>
+    <meta name="description" content="ANPSF research 2024"/>
+    <meta name="Author" content="HRBC"/>
+    <meta name="keywords" content="ANPSF, forest, teledetection, remote sensing"/>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<script src="actions.js"></script>
+    <div class="agrupar1">
+    <header>
+    <h1>
+        Influencia de la topografía en la distribución de las comunidades
+        vegetales del Área Natural Protegida Sierra Fría en
+        Aguascalientes.
+    </h1>
+        <img src="sierra1.jpg" width="100%" alt="Vista de la Sierra Fría"><br>
+        <text class="autor">
+            M.C.Héctor René Becerril Cejudo
+        </text>
+        <br>
+        <br>
+    <h3>
+        1. Selección de imágenes
+    </h3>
+    </header>
+    <section>
+
+            &emsp;Se seleccionó una escena multiespectral de la plataforma <b>SENTINEL 2</b>
+        capturada con el sensor <b>Multi Spectral Intrument</b> (MSI) con fecha
+        de registro de 2023-03-13, y obtenida a través de la herramienta de gestión
+        <a href="https://scihub.copernicus.eu/"> Copernicus </a> de
+        la <b>Agencia Espacial Europea</b> (ESA por sus siglas en inglés). Las características
+        de la imagen
+            <span id="dots">...</span><span id="more"> se describen a continuación:
+        <br>
+        <br>
+        SENTINEL-2 lleva un instrumento óptico que muestrea 13 bandas espectrales:
+        cuatro bandas a 10 m, seis bandas a 20 m y tres bandas a una resolución espacial de 60 m.
+        La anchura de la franja orbital es de 290 km. Se obtuvo una escena nivel 1C con datos
+        de reflectancia TOA con geometría geográfica. Los gránulos, también llamados teselas, son
+        ortoimágenes de 110x110 km2 en proyección UTM/WGS84.
+        <br>
+        <br>
+        El instrumento multiespectral (MSI)
+        utiliza un concepto de barrido de empuje. Un sensor de barrido funciona recopilando filas
+        de datos de imágenes a lo largo de la franja orbital y utiliza el movimiento hacia
+        adelante de la nave espacial a lo largo de la trayectoria de la órbita para proporcionar
+        nuevas filas para la adquisición. La luz reflejada hasta el instrumento MSI desde la Tierra
+        y su atmósfera es recogida por un telescopio de tres espejos (M1, M2 y M3) y enfocada, a
+        través de un divisor de haz, en dos conjuntos de plano focal (FPA): uno para las diez
+        longitudes de onda VNIR y otro para las tres longitudes de onda SWIR. En la Tabla 1 se
+        muestra la descripción de las 13 bandas del sensor MSI.
+        <br>
+        <br>
+
+        <i style="color:#555656;">Tabla 1. Descripción radiométrica y espacial de las bandas del MSI.</i>
+            <table border=0
+           style="background-color:lightgrey;width:100%;"
+           class="table1">
+
+                    <thead style="background-color:#66C802;color:white">
+
+                        <tr style="background:green3;"><th class="word"> Número de banda </th> <th class="meaning">Longitud de<br>onda central <br>(nm)</th><th class="example">Ancho de banda <br>(nm)</th><th class="example">Resolución espacial<br>(m)</th></tr></thead>
+                        <tr style="text-align:left;color:black;">  <td> 1</td><td align="center">442.7</td><td>20</td><td>60</td></tr>
+                        <tr style="text-align:left;color:black;">  <td> 2</td><td align="center">492.7</td><td>65</td><td>10</td></tr>
+                        <tr style="text-align:left;color:black;">  <td> 3</td><td align="center">559.8</td><td>35</td><td>10</td></tr>
+                        <tr style="text-align:left;color:black;">  <td> 4</td><td align="center">664.6</td><td>30</td><td>10</td></tr>
+                        <tr style="text-align:left;color:black;">  <td> 5</td><td align="center">704.1</td><td>14</td><td>20</td></tr>
+                        <tr style="text-align:left;color:black;">  <td> 6</td><td align="center">740.5</td><td>14</td><td>20</td></tr>
+                        <tr style="text-align:left;color:black;">  <td> 7</td><td align="center">782.8</td><td>19</td><td>20</td></tr>
+                        <tr style="text-align:left;color:black;">  <td> 8</td><td align="center">832.8</td><td>105</td><td>10</td></tr>
+                        <tr style="text-align:left;color:black;">  <td> 8a</td><td align="center">864.7</td><td>21</td><td>20</td></tr>
+                        <tr style="text-align:left;color:black;">  <td> 9</td><td align="center">945.1</td><td>19</td><td>60</td></tr>
+                        <tr style="text-align:left;color:black;">  <td> 10</td><td align="center">1,373.5</td><td>29</td><td>60</td></tr>
+                        <tr style="text-align:left;color:black;">  <td> 11</td><td align="center">1,613.7</td><td>90</td><td>20</td></tr>
+                        <tr style="text-align:left;color:black;">  <td> 12</td><td align="center">2,202.4</td><td>174</td><td>20</td></tr>
+                 </table>
+        <br>
+        <br>
+        Escena descargada:<br>
+        D:\Documents\GIS\IMG_SAT\S2A_MSIL1C_20230313T172111_N0509_R012_T13QGE_20230313T222343\
+        <br>
+        <br>
+        </span>
+                <button onclick="myFunction()" id="myBtn">Leer más</button>
+        <br>
+        <br>
+    </section>
+        <br>
+        <br>
+    <header>
+    <h3>
+        2. Preprocesamiento de imágenes: corrección atmosférica DOS
+    </h3>
+    </header>
+    <section>
+           Se utilizó el software QGIS para realizar el procedimiento de corrección
+        atmosférica por el método mejorado de objeto negro propuesto por Chávez (1996)
+        <text style="color:red;">-rastrear fuente original-</text>
+        y para cada una de las bandas de la escena MSI.
+        <span id="dots2">...</span><span id="more2">
+        Previo a la corrección se hizo un recorte de la escena utilizando un polígono de formato shapefile.
+        Con los datos de reflectancia corregidos se procedió posteriormente a realizar
+        una corrección de iluminación por topográfía.
+        <br>
+        <br>
+            Polígono:<br>
+        D:\Documents\GIS\IMG_SAT\S2A_MSIL1C_20230313T172111_N0509_R012_T13QGE_20230313T222343\ANPSF_2023_ZONA.shp<br>
+            Salida:<br>
+        D:\Documents\GIS\IMG_SAT\S2A_MSIL1C_20230313T172111_N0509_R012_T13QGE_20230313T222343\DOS_20230313\DOS_20230313<br>
+        <br>
+        <br>
+        </span>
+                <button onclick="myFunction2()" id="myBtn2">Leer más</button>
+        <br>
+        <br>
+    </section>
+        <br>
+        <br>
+        <header>
+    <h3>
+        3. Preprocesamiento de imágenes: corrección topográfica por factor C
+    </h3>
+    </header>
+    <section>
+           Se utilizó el software SAGA incluido en QGIS así como el <b>Modelo de Elevación de Terreno</b> (MET) para
+        realizar el procedimiento de corrección de iluminación topográfica por el método de <b>factor C</b>
+        aplicado a las bandas 3, 4, 8 y 11 de la escena MSI. El MET se obtuvo
+        <span id="dots3">...</span><span id="more3">
+        a través del <b>Continuo de Elevaciones Mexicano </b>(<a href="https://www.inegi.org.mx/app/geo2/elevacionesmex/#:~:text=El%20Continuo%20de%20Elevaciones%20Mexicano%203.0%20%28CEM%203.0%29,le%20integran%20valores%20que%20representan%20las%20elevaciones%20%28Z%29.">CEM</a>)
+        del Instituto de Geografíaa, Estadística e Informática (INEGI).
+        <br>
+        <br>
+        Se identificaron en el archivo de la imagen MSI los datos de valor medio del ángulo solar:
+        ángulo cenital y ángulo azimutal (Tabla 2).
+        <br>
+        <br>
+        <i style="color:#555656;">Tabla 2. Valores de orientación solar de la escena del MSI.</i>
+        <table border=0
+           style="background-color:lightgrey;width:100%;"
+           class="table1">
+
+                    <thead style="background-color:#66C802;color:white">
+
+                        <tr style="background:green3;"><th class="word"> Ángulo cenital<br>(°)</th> <th class="meaning">Ángulo azimutal <br>(°)</th></tr></thead>
+                        <tr style="text-align:left;color:black;">  <td> 31.9443</td><td align="center">138.7315</td></tr>
+
+                 </table>
+        <br>
+        <br>
+        El valor del ángulo cenital se utilizó para obtener el ángulo de
+        elevación solar como se indica a continuación:
+        <br>
+        <br>
+        &emsp;&emsp;sh = 90 - ca
+        <br>
+        <br>
+        donde:<br>
+        sh: es el valor del ángulo de elevación solar.<br>
+        ca: es el valor del ángulo cenital
+        <br>
+        <br>
+        Entonces, los valores de ángulo solar ingresados en SAGA para realizar la
+        corrección de iluminación fueron el ángulo azimutal y el ángulo de elevación solar.
+        <br>
+        <br>
+        Finalmente, se ingresaron en SAGA los parámetros de corrección complementarios
+        que se muestran en la Tabla 3.
+        <br>
+        <br>
+        <i style="color:#555656;">Tabla 3. Parámetros para la corrección de iluminación por factor C.</i>
+        <table border=0
+           style="background-color:lightgrey;width:100%;"
+           class="table1">
+
+                    <thead style="background-color:#66C802;color:white">
+
+                        <tr style="background:green3;"><th class="word"> Banda</th> <th class="meaning">Max cells</th><th class="meaning">Minnaert</th></tr></thead>
+                        <tr style="text-align:left;color:black;"><td align="center">3</td><td align="center">49</td><td align="center">0.5</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">4</td><td align="center">49</td><td align="center">0.5</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">8</td><td align="center">225</td><td align="center">0.5</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">11</td><td align="center">25</td><td align="center">0.5</td></tr>
+
+        </table>
+        <br>
+        <br>
+        Como resultado se obtuvo una imagen mejorada con mayor contraste entre las coberturas
+        presentes en la escena como se muestra en la Figura 1.
+        <br>
+        <br>
+        <img src="view compare1.png" width="100%" alt="Corrección de iluminación por factor C"><br>
+        Figura 1. Imagen sin corrección de iluminación (a). Imagen con iluminación corregida por
+        método de factor C (b).
+        <br>
+        <br>
+            Datos de elevación:<br>
+        D:\Documents\GIS\AGS_ANPSF\ANPSF_2023\MED_20230313_ANPSF.tif<br>
+            Salida:<br>
+        D:\Documents\GIS\IMG_SAT\S2A_MSIL1C_20230313T172111_N0509_R012_T13QGE_20230313T222343\C3_20230313\C_20230313_B0stack_raster.tif
+        <br>
+        <br>
+        </span>
+                <button onclick="myFunction3()" id="myBtn3">Leer más</button>
+        <br>
+        <br>
+    </section>
+        <br>
+        <br>
+        <header>
+    <h3>
+        4. Procesamiento de imágenes: análisis de componentes principales (ACP)
+    </h3>
+    </header>
+    <section>
+           El siguiente paso consistió en llevar cabo un análisis de componentes principales
+        (ACP) sobre los datos de las bandas corregidas de la escena MSI. Con este proceso se
+        <span id="dots4">...</span><span id="more4">
+        busca reducir la cantidad de información en un menor número de bandas llamadas
+        componentes principales que capturen la mayor cantidad de información en términos
+        de la varianza.
+        <br>
+        <br>
+        Salida:<br>
+        D:\Documents\GIS\IMG_SAT\S2A_MSIL1C_20230313T172111_N0509_R012_T13QGE_20230313T222343\C3_20230313\pca\pca
+        <br>
+        <br>
+        </span>
+                <button onclick="myFunction4()" id="myBtn4">Leer más</button>
+        <br>
+        <br>
+    </section>
+        <br>
+        <br>
+    </section>
+
+        <header>
+    <h3>
+        5. Procesamiento de imágenes: creación de un índice de vigor vegetal (IVV)
+    </h3>
+    </header>
+    <section>
+           Posteriormente se generó un índice que exprese la mayor o menor presencia de vegetación
+        en el terreno utilizando las bandas corregidas de la escena MSI. El uso de índices es otra
+        manera de reducir la cantidad de información a través de las relaciones que hay en el
+        comportamiento de la reflectancia dada por diferentes coberturas. En este caso, para la
+        <span id="dots5">...</span><span id="more5">
+        creación del índice se utilizaron las bandas 4, 8 y 11 con la siguiente expresión:
+        <br>
+        <br>
+        &emsp;&emsp;((b4 - b3) ^b5) / ((b4 + b3) / b5)
+        <br>
+        <br>
+        Salida:<br>
+        D:\Documents\GIS\IMG_SAT\S2A_MSIL1C_20230313T172111_N0509_R012_T13QGE_20230313T222343\INDEX VVI
+        <br>
+        <br>
+        </span>
+                <button onclick="myFunction5()" id="myBtn5">Leer más</button>
+        <br>
+        <br>
+    </section>
+
+        <br>
+        <br>
+    </section>
+
+        <header>
+    <h3>
+        6. Clasificación de imágenes: k-means
+    </h3>
+    </header>
+    <section>
+           Una vez procesados los datos de radiación registrados desde la plataforma
+        satelital Sentinel 2 a través del sensor MSI, se realizaron dos procesos de
+        clasificación no supervisada utilizando el
+        software ENVI 5.3. El primer proceso de clasificación se hizo
+        sobre la imagen de<span id="dots6">...</span><span id="more6"> componentes
+        principales obteniendo una imagen clasificada que
+        llamaremos <b>imagen ACP</b>; el segundo proceso se realizó
+        sobre la imgen del índice de verdor y vigor obteniendo otra imagen clasificada que
+        llamamos <b>imagen IVV</b>. Para ambos casos se utilizó el
+        método de clasificación por conglomerados k-means con los parámetros que
+        a continuación se describen:
+        <br>
+        <br>
+        Número de clases: 7<br>
+        Iteraciones: 50<br>
+        Desviaciones desde la media: 7<br>
+        Máxima distancia del error: 0.5
+
+        <br>
+        <br>
+        <h4>
+            Clasificación sobre la imagen ACP
+        </h4>
+        Una vez terminadas las iteraciones sobre la imagen ACP se obtuvo una imagen con 7 clases
+        mas otra clase correspondiente a todos aquellos pixeles NO clasificados para un total de 8 clases.
+        Sobre la imagen generada se procede a
+        crear las ROI para cada una de las clases. Una vez hecho esto, se nombran las ROI como
+        "pca roi n" donde n el número de identificación de clase. Se cargaron las ROI sobre
+        la imagen MSI multibanda y se analizó la separabilidad de las ROI. Se hizo la unión
+        de los pares de ROI 1 y 2, 4 y 5, así como 6 y 7 cuya separabilidad fue menor o igual a 0.5
+        (Tabla 4).
+        <br>
+        <br>
+        <i style="color:#555656;">Tabla 4. Separabilidad de las ROI en la clasificación
+        dada por la <b>imagen ACP</b></i>
+        <table border=0
+           style="background-color:lightgrey;width:100%;"
+           class="table1">
+
+                    <thead style="background-color:#66C802;color:white">
+
+                        <tr style="background:green3;"><th class="word"> ROI ID</th> <th class="meaning">ROI ID</th><th class="meaning">Separación</th></tr></thead>
+                        <tr style="text-align:left;color:black;"><td align="center">1</td><td align="center">2</td><td align="center">0.37</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">6</td><td align="center">7</td><td align="center">0.37</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">4</td><td align="center">5</td><td align="center">0.50</td></tr>
+
+        </table>
+        <br>
+        <br>
+        En la Tabla 5 se muestran los valores medios de reflectancia observados en cada clase y para
+        cada una de las bandas multiespectrales del sensor satelital MSI.
+        <br>
+        <br>
+        <i style="color:#555656;">Tabla 5. Valor medio de clase y desviación estándar para cada una de las bandas del sensor MSI
+        de acuerdo a las clases de la <b>imagen ACP</b>. Debe destacarse el aumento en la
+        diferencia entre los valores medios de las bandas 8 y 4, así como la disminución constante en
+        los valores medios de la banda 11 a través de las clases obtenidas.</i><br>
+        <table border=0
+           style="background-color:lightgrey;width:100%;"
+           class="table1">
+
+                    <thead style="background-color:#66C802;color:white">
+
+                        <tr style="background:green3;"><th class="word"> Clase</th> <th class="meaning" colspan="2">Banda 3<br>media-desv</th><th class="meaning" colspan="2">Banda 4<br>media-desv</th><th class="meaning" colspan="2">Banda 8<br>media-desv</th><th class="meaning" colspan="2">Banda 11<br>media-desv</th></tr></thead>
+                        <tr style="text-align:left;color:black;"><td align="center">Clase 1</td><td align="center">0.2352</td><td align="center">0.0175</td><td align="center">0.2686</td><td align="center">0.0232</td><td align="center">0.3416</td><td align="center">0.0231</td><td align="center">0.4479</td><td align="center">0.0322</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">Clase 2</td><td align="center">0.2096</td><td align="center">0.0097</td><td align="center">0.2321</td><td align="center">0.0111</td><td align="center">0.3064</td><td align="center">0.0124</td><td align="center">0.3958</td><td align="center">0.0166</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">Clase 3</td><td align="center">0.1916</td><td align="center">0.0083</td><td align="center">0.2065</td><td align="center">0.0103</td><td align="center">0.2810</td><td align="center">0.0144</td><td align="center">0.3484</td><td align="center">0.0186</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">Clase 4</td><td align="center">0.1788</td><td align="center">0.0057</td><td align="center">0.1824</td><td align="center">0.0101</td><td align="center">0.2668</td><td align="center">0.0174</td><td align="center">0.2908</td><td align="center">0.0198</td></tr>
+
+
+        </table>
+        <br>
+        <br>
+        <br>
+        <h4>
+            Clasificación sobre la imagen IVV
+        </h4>
+        Una vez concluidas las 50 iteraciones de la clasificación sobre el índice de verdor y vigor, se
+        obtuvo la imagen IVV con 7 clases incluyendo otra mas con datos NO clasificados para un total de 8 clases.
+        Se cargaron las ROI sobre la imagen MSI y se analizó la separabilidad de las ROI. Se hizo la unión
+        de las ROI 1 y 2, 5 y 6, y el resultado de ésta última unión se fusionó con la ROI 7. La separabilidad
+        de los pares de ROI se muestra en la Tabla 6.
+        <br>
+        <br>
+        <i style="color:#555656;">Tabla 6. Valores de menor separabilidad entre pares de ROI de acuerdo
+            a los valores de las bandas MSI para cada una de las clases de la <b>imagen IVV</b>.</i><br>
+        <table border=0
+           style="background-color:lightgrey;width:100%;"
+           class="table1">
+
+                    <thead style="background-color:#66C802;color:white">
+
+                        <tr style="background:green3;"><th class="word"> ROI ID</th> <th class="meaning">ROI ID</th><th class="meaning">Separación</th></tr></thead>
+                        <tr style="text-align:left;color:black;"><td align="center">1</td><td align="center">2</td><td align="center">1.2882</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">5</td><td align="center">6</td><td align="center">1.3228</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">6</td><td align="center">7</td><td align="center">1.1829</td></tr>
+
+        </table>
+        <br>
+        <br>
+        Es notable que la clasificación realizada sobre los datos del índice de vegetación y verdor
+        muestran mayor ruido que se expresa como una mayor fragmentación en la distribución espacial
+        de los pixeles clasificados.
+        <br>
+        <br>
+        <i style="color:#555656;">Tabla 7. Valor medio de clase y desviación estándar para cada una de las bandas del sensor MSI
+        de acuerdo a las clases de la <b>imagen IVV</b>.</i><br>
+        <table border=0
+           style="background-color:lightgrey;width:100%;"
+           class="table1">
+
+                    <thead style="background-color:#66C802;color:white">
+
+                        <tr style="background:green3;"><th class="word"> Clase</th> <th class="meaning" colspan="2">Banda 3<br>media-desv</th><th class="meaning" colspan="2">Banda 4<br>media-desv</th><th class="meaning" colspan="2">Banda 8<br>media-desv</th><th class="meaning" colspan="2">Banda 11<br>media-desv</th></tr></thead>
+                        <tr style="text-align:left;color:black;"><td align="center">Clase 1</td><td align="center">0.2035</td><td align="center">0.0258</td><td align="center">0.2232</td><td align="center">0.0360</td><td align="center">0.2964</td><td align="center">0.0359</td><td align="center">0.3677</td><td align="center">0.0600</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">Clase 2</td><td align="center">0.2078</td><td align="center">0.0100</td><td align="center">0.2297</td><td align="center">0.0116</td><td align="center">0.3003</td><td align="center">0.0212</td><td align="center">0.3882</td><td align="center">0.0323</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">Clase 3</td><td align="center">0.1948</td><td align="center">0.0085</td><td align="center">0.2120</td><td align="center">0.0091</td><td align="center">0.2838</td><td align="center">0.0185</td><td align="center">0.3587</td><td align="center">0.0277</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">Clase 4</td><td align="center">0.1791</td><td align="center">0.0060</td><td align="center">0.1816</td><td align="center">0.0100</td><td align="center">0.2713</td><td align="center">0.0188</td><td align="center">0.2965</td><td align="center">0.0279</td></tr>
+
+
+        </table>
+        <br>
+        <br>
+        Si bien se presenta nuevamente un aumento en la
+        diferencia entre los valores medios de las bandas 8 y 4, y también se observa la disminución en
+        los valores medios de la banda 11 a través de las clases obtenidas, el comportamiento es menos
+        consistente que lo observado anteriormente con los datos de la clasificación sobre la <b>imagen ACP</b>.
+        En la Figura 2 se muestra un comparativo entre las clases generadas por los dos procesos de
+        clasificación.
+        <br>
+        <br>
+        <img src="pca vs ivv.png" width="100%" alt="clasificación k means sobre pca y vvi"><br>
+        <i style="color:#555656;">Fig 2. Comparativo de los resultados de los dos procesos de clasificación kmeans.
+        Del lado izquierdo las clases obtenidas de la <b>imagen ACP</b> y del lado derecho el resultado de la
+            clasificación sobre la <b>imagen IVV</b></i>.
+        <br>
+        <br>
+        <br>
+        <br>
+        Para ambos procesos de clasificación, al final se obtuvo una imagen raster con
+        4 clases cuya descripción se muestran en la Tabla 8.
+        Las cuatro clases obtenidas representan 4 niveles de cobertura vegetal en función del verdor
+        y del contenido de humedad, aspectos que se expresan a través de las bandas 4, 8 y 11.
+        <br>
+        <br>
+        <i style="color:#555656;">Tabla 8. Descripción de las clases obtenidas por medio de los
+            procesos de clasificación.</i><br>
+        <table border=0
+           style="background-color:lightgrey;width:100%;"
+           class="table1">
+
+                    <thead style="background-color:#66C802;color:white">
+
+                        <tr style="background:green3;"><th class="word"> Clase</th> <th class="meaning">Nivel</th><th class="meaning">Descripción</th></tr></thead>
+                        <tr style="text-align:left;color:black;"><td align="center">1</td><td align="center">2</td><td align="center">Pastizal y suelo desnudo</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">2</td><td align="center">3</td><td align="center">Matorral disperso</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">3</td><td align="center">5</td><td align="center">Bosque denso senescente</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">4</td><td align="center">7</td><td align="center">Bosque denso siempre verde</td></tr>
+
+        </table>
+        <br>
+        <br>
+        <br>
+        <br>
+        Para ambas clasificaciones se exportaron las ROI a imágenes clasificadas y posteriormente
+        a formato TIFF para su análisis en R en la siguiente sección.
+        <br>
+        <br>
+        Salida:<br>
+        D:\Documents\GIS\IMG_SAT\S2A_MSIL1C_20230313T172111_N0509_R012_T13QGE_20230313T222343\CLASSIFY_LANDCOVER\kmeans pca.hdr<br>
+        D:\Documents\GIS\IMG_SAT\S2A_MSIL1C_20230313T172111_N0509_R012_T13QGE_20230313T222343\CLASSIFY_LANDCOVER\kmeans ivv.hdr<br>
+        D:\Documents\GIS\IMG_SAT\S2A_MSIL1C_20230313T172111_N0509_R012_T13QGE_20230313T222343\CLASSIFY_LANDCOVER\roi pca.roi<br>
+        D:\Documents\GIS\IMG_SAT\S2A_MSIL1C_20230313T172111_N0509_R012_T13QGE_20230313T222343\CLASSIFY_LANDCOVER\roi pca union.roi<br>
+        D:\Documents\GIS\IMG_SAT\S2A_MSIL1C_20230313T172111_N0509_R012_T13QGE_20230313T222343\CLASSIFY_LANDCOVER\roi ivv.roi<br>
+        D:\Documents\GIS\IMG_SAT\S2A_MSIL1C_20230313T172111_N0509_R012_T13QGE_20230313T222343\CLASSIFY_LANDCOVER\roi ivv union.roi<br>
+        D:\Documents\GIS\IMG_SAT\S2A_MSIL1C_20230313T172111_N0509_R012_T13QGE_20230313T222343\CLASSIFY_LANDCOVER\roi pca to tif.tif<br>
+        D:\Documents\GIS\IMG_SAT\S2A_MSIL1C_20230313T172111_N0509_R012_T13QGE_20230313T222343\CLASSIFY_LANDCOVER\roi ivv to tif.tif<br>
+        </span>
+                <button onclick="myFunction6()" id="myBtn6">Leer más</button>
+        <br>
+        <br>
+
+
+    </section>
+    <br>
+        <br>
+        <header>
+    <h3>
+        7. Análisis categórico de regresión logística
+    </h3>
+    </header>
+    <section>
+        Para realizar el análisis multinomial o categórico se utilizó la información raster
+        de topografía de la zona de estudio (aspecto y pendiente) así como la información categórica
+        de los clases de vegetación obtenidas mediante la clasificación de conglomerados
+        por kmeans hecha sobre la <b>imagen ACP</b>. El análisis de regresión logística multinomial
+        <span id="dots7">...</span><span id="more7">
+        trabaja sobre una variable respuesta o dependiente de naturaleza categórica y, para este caso,
+        con dos variabes predictivas: una continua y otra categórica. El análisis busca detectar si
+        es que existe alguna influencia significativa de la topografía (aspecto y pendiente) sobre la
+        distribución de las clases de vegetación.
+        <br>
+        <br>
+        Para poder llevar a cabo este análisis fue necesario hacer una preparación de los datos topográficos
+        de la zona de estudio. La información continua de la orientación o aspecto del terreno se
+        seccionó en cuatro categorías: N, S, E y O.
+        <br>
+        <br>
+        <i style="color:#555656;">Tabla 9. Resultados del modelo de regresión logística.
+            <br>
+            <br>
+        Coeficientes.</i><br>
+        <table border=0
+           style="background-color:lightgrey;width:100%;"
+           class="table1">
+
+                    <thead style="background-color:#66C802;color:white">
+
+                        <tr style="background:green3;"><th class="word"> Clase</th> <th class="meaning">Intercept</th><th class="meaning">N</th><th class="meaning">S</th><th class="meaning">W</th><th class="meaning">Slope</th></tr></thead>
+                        <tr style="text-align:left;color:black;"><td align="center">Bosque denso</td><td align="center">-0.7427</td><td align="center">0.0845</td><td align="center">-0.1224</td><td align="center">0.2561</td><td align="center">0.0333</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">Matorral</td><td align="center">-0.2923</td><td align="center">-0.2819</td><td align="center">-0.5171</td><td align="center">-0.4121</td><td align="center">-0.0585</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">Pastizal</td><td align="center">0.1807</td><td align="center">-0.2437</td><td align="center">-0.9053</td><td align="center">-0.5822</td><td align="center">-0.1211</td></tr>
+
+
+        </table>
+        <i style="color:#555656;">Error estándar</i><br>
+        <table border=0
+           style="background-color:lightgrey;width:100%;"
+           class="table1">
+            <caption style="color:#555656;">Desviación residual: 1,180,767<br>
+            AIC: 1,180,797</caption>
+
+                    <thead style="background-color:#66C802;color:white">
+
+                        <tr style="background:green3;"><th class="word"> Clase</th> <th class="meaning">Intercept</th><th class="meaning">N</th><th class="meaning">S</th><th class="meaning">W</th><th class="meaning">Slope</th></tr></thead>
+                        <tr style="text-align:left;color:black;"><td align="center">Bosque denso</td><td align="center">0.0082</td><td align="center">0.0086</td><td align="center">0.0096</td><td align="center">0.0098</td><td align="center">0.0003</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">Matorral</td><td align="center">0.0102</td><td align="center">0.0111</td><td align="center">0.0136</td><td align="center">0.0144</td><td align="center">0.0006</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">Pastizal</td><td align="center">0.0108</td><td align="center">0.0113</td><td align="center">0.0160</td><td align="center">0.0157</td><td align="center">0.0008</td></tr>
+
+
+        </table>
+        <br>
+        <i style="color:#555656;">Valores exponenciales de los odds: probabilidad de ocurrencia</i>
+        <table border=0
+           style="background-color:lightgrey;width:100%;"
+           class="table1">
+
+                    <thead style="background-color:#66C802;color:white">
+
+                        <tr style="background:green3;"><th class="word"> Clase</th> <th class="meaning">Intercept</th><th class="meaning">N</th><th class="meaning">S</th><th class="meaning">W</th><th class="meaning">Slope</th></tr></thead>
+                        <tr style="text-align:left;color:black;"><td align="center">Bosque denso</td><td align="center">0.4758</td><td align="center">1.0882</td><td align="center">0.8847</td><td align="center">1.2919</td><td align="center">1.0339</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">Matorral</td><td align="center">0.7465</td><td align="center">0.7543</td><td align="center">0.5962</td><td align="center">0.6622</td><td align="center">0.9430</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">Pastizal</td><td align="center">1.1981</td><td align="center">0.7837</td><td align="center">0.4044</td><td align="center">0.5586</td><td align="center">0.8859</td></tr>
+
+
+        </table>
+        <br>
+        <br>
+        En la Figura 3 se puede observar que la probabilidad de ocurrencia del <b>bosque denso</b> se ve
+        influenciada por el aumento en los valores de la pendiente, principalmente en orientaciones
+        del terreno Este y Norte. El <b>bosque disperso</b> presenta mayores probabilidades de ocurrencia
+        cuando el valor de la pendiente está alrededor de la media (12 %) y en mayor magnitud para aquellas
+        superficies de terreno con orientación Sur. En el caso del <b>pastizal</b> se observa que sus
+        probabilidades de ocurrecnia aumentan en pendientes con valores mínimos.
+        <br>
+        <br>
+        <img src="plot_prob.png" width="100%" alt="gráfica de probabilidades"><br>
+        <i style="color:#555656;">Fig 3. Probabilidades de ocurrencia de las diferentes clases de vegetación.</i>.
+        <br>
+        <br>
+        <br>
+        Referencias:<br>
+        https://stats.oarc.ucla.edu/r/dae/multinomial-logistic-regression/<br>
+        https://stats.oarc.ucla.edu/other/examples/icda/<br>
+        https://www.ibm.com/docs/es/spss-statistics/saas?topic=regression-multinomial-logistic<br>
+
+        </span>
+                <button onclick="myFunction7()" id="myBtn7">Leer más</button>
+        <br>
+        <br>
+
+    </section>
+        <br>
+    </div>
+
+
+<footer>
+    Revisión 2023-2024
+</footer>
+</body>
+</html>
