@@ -17,6 +17,7 @@
         vegetales del Área Natural Protegida Sierra Fría en
         Aguascalientes
     </h1>
+        <img src="sierra1.jpg" width="100%" alt="Vista de la Sierra Fría"><br>
         <text class="autor">
             M.C.Héctor René Becerril Cejudo
         </text>
@@ -322,17 +323,6 @@
         </table>
         <br>
         <br>
-        En la Figura 2 se observa la <i>imagen ACP</i> con las cuatro diferentes clases obtenidas a partir de la
-        clasificación de la imagen de componentes principales.
-        <br>
-        <br>
-        <img src="pca clases.png" width="100%" alt="clasificación k means sobre pca"><br>
-        <i style="color:#555656;">Fig 2. A la derecha se muestra la <b>imagen ACP</b> como el resultado
-            de la clasificación sobre los componentes principales por método de k-means; mientras que
-            del lado izquierdo se muestra una composición de la imagen satelital MSI con las bandas espectrales
-            11, 8 y 3 en R-G-B.</i>
-        <br>
-        <br>
         En la Tabla 5 se muestran los valores medios de reflectancia observados en cada clase y para
         cada una de las bandas multiespectrales del sensor satelital MSI.
         <br>
@@ -365,7 +355,7 @@
         obtuvo la imagen IVV con 7 clases incluyendo otra mas con datos NO clasificados para un total de 8 clases.
         Se cargaron las ROI sobre la imagen MSI y se analizó la separabilidad de las ROI. Se hizo la unión
         de las ROI 1 y 2, 5 y 6, y el resultado de ésta última unión se fusionó con la ROI 7. La separabilidad
-        de los pares de ROI se muestra en la Tabla 6 y la imagen resultante se muestra en la Figura 3.
+        de los pares de ROI se muestra en la Tabla 6.
         <br>
         <br>
         <i style="color:#555656;">Tabla 6. Valores de menor separabilidad entre pares de ROI de acuerdo
@@ -382,12 +372,6 @@
                         <tr style="text-align:left;color:black;"><td align="center">6</td><td align="center">7</td><td align="center">1.1829</td></tr>
 
         </table>
-        <br>
-        <br>
-        <img src="ivv clases.png" width="100%" alt="clasificación k means sobre vvi"><br>
-        <i style="color:#555656;">Fig 3. Se observa del lado izquierdo la imagen MSI compuesta por las bandas 11, 8 y 3. Y
-        del lado derecho se observa la imagen obtenida de la clasificación kmeans hecha sobre
-        la imagen IVV.</i>
         <br>
         <br>
         Es notable que la clasificación realizada sobre los datos del índice de vegetación y verdor
@@ -417,12 +401,12 @@
         diferencia entre los valores medios de las bandas 8 y 4, y también se observa la disminución en
         los valores medios de la banda 11 a través de las clases obtenidas, el comportamiento es menos
         consistente que lo observado anteriormente con los datos de la clasificación sobre la <b>imagen ACP</b>.
-        En la Figura 4 se muestra un comparativo entre las clases generadas por los dos procesos de
+        En la Figura 2 se muestra un comparativo entre las clases generadas por los dos procesos de
         clasificación.
         <br>
         <br>
         <img src="pca vs ivv.png" width="100%" alt="clasificación k means sobre pca y vvi"><br>
-        <i style="color:#555656;">Fig 4. Comparativo de los resultados de los dos procesos de clasificación kmeans.
+        <i style="color:#555656;">Fig 2. Comparativo de los resultados de los dos procesos de clasificación kmeans.
         Del lado izquierdo las clases obtenidas de la <b>imagen ACP</b> y del lado derecho el resultado de la
             clasificación sobre la <b>imagen IVV</b></i>.
         <br>
@@ -478,23 +462,35 @@
         <br>
         <header>
     <h3>
-        7. Análisis de contrastes topográficos por regresión logística
+        7. Análisis categórico de regresión logística
     </h3>
     </header>
     <section>
-        Sección en construcción elaborándose con
+        Para realizar el análisis multinomial o categórico se utilizó la información raster
+        de topografía de la zona de estudio (aspecto y pendiente) así como la información categórica
+        de los clases de vegetación obtenidas mediante la clasificación de conglomerados
+        por kmeans hecha sobre la <b>imagen ACP</b>. El análisis de regresión logística multinomial
         <span id="dots7">...</span><span id="more7">
-        los insumos previamente generados.
+        trabaja sobre una variable respuesta o dependiente de naturaleza categórica y, para este caso,
+        con dos variabes predictivas: una continua y otra categórica. El análisis busca detectar si
+        es que existe alguna influencia significativa de la topografía (aspecto y pendiente) sobre la
+        distribución de las clases de vegetación.
+        <br>
+        <br>
+        Para poder llevar a cabo este análisis fue necesario hacer una preparación de los datos topográficos
+        de la zona de estudio. La información continua de la orientación o aspecto del terreno se
+        seccionó en cuatro categorías: N, S, E y O.
         <br>
         <br>
         Referencias:<br>
         https://stats.oarc.ucla.edu/r/dae/multinomial-logistic-regression/<br>
         https://stats.oarc.ucla.edu/other/examples/icda/<br>
+        https://www.ibm.com/docs/es/spss-statistics/saas?topic=regression-multinomial-logistic<br>
 
         </span>
                 <button onclick="myFunction7()" id="myBtn7">Leer más</button>
         <br>
-        <br><
+        <br>
     </section>
         <br>
     </div>
