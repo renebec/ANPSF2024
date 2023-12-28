@@ -113,7 +113,8 @@ color:white;
 
 footer{
 font-size:75%;
-text-align:center
+text-align:center;
+color:beige;
 }
 
 .alert alert-success{
