@@ -86,6 +86,11 @@ table, th, td {
   word-break:break-all;
 }
 
+caption {
+caption-side:bottom;
+text-align:left;
+}
+
 .bullets{
 margin:10px auto;
 width:670px;
