@@ -472,8 +472,8 @@
     <section>
         Para realizar el análisis multinomial o categórico se utilizó la información raster
         de topografía de la zona de estudio (aspecto y pendiente) así como la información categórica
-        de los clases de vegetación obtenidas mediante la clasificación de conglomerados
-        por kmeans hecha sobre la <b>imagen ACP</b>. El análisis de regresión logística multinomial
+        de los clases de vegetación obtenidas mediante los dos procesos de clasificación de conglomerados.
+        El análisis de regresión logística multinomial
         <span id="dots7">...</span><span id="more7">
         trabaja sobre una variable respuesta o dependiente de naturaleza categórica y, para este caso,
         con dos variabes predictivas: una continua y otra categórica. El análisis busca detectar si
@@ -483,7 +483,10 @@
         <br>
         Para poder llevar a cabo este análisis fue necesario hacer una preparación de los datos topográficos
         de la zona de estudio. La información continua de la orientación o aspecto del terreno se
-        seccionó en cuatro categorías: N, S, E y O.
+        particionó en cuatro categorías: N, S, E y O.
+        <br>
+        <br>
+        <h2>Regresión logística sobre la clasificación ACP</h2>
         <br>
         <br>
         <i style="color:#555656;">Tabla 9. Resultados del modelo de regresión logística.
@@ -497,9 +500,9 @@
                     <thead style="background-color:#66C802;color:white">
 
                         <tr style="background:green3;"><th class="word"> Clase</th> <th class="meaning">Intercept</th><th class="meaning">N</th><th class="meaning">S</th><th class="meaning">W</th><th class="meaning">Slope</th></tr></thead>
-                        <tr style="text-align:left;color:black;"><td align="center">Bosque denso</td><td align="center">-0.7427</td><td align="center">0.0845</td><td align="center">-0.1224</td><td align="center">0.2561</td><td align="center">0.0333</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">Matorral</td><td align="center">-0.2923</td><td align="center">-0.2819</td><td align="center">-0.5171</td><td align="center">-0.4121</td><td align="center">-0.0585</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">Pastizal</td><td align="center">0.1807</td><td align="center">-0.2437</td><td align="center">-0.9053</td><td align="center">-0.5822</td><td align="center">-0.1211</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">Bosque siempreverde</td><td align="center">-0.6581</td><td align="center">0.1716</td><td align="center">-0.0845</td><td align="center">-0.2069</td><td align="center">0.0333</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">Matorral</td><td align="center">-0.5742</td><td align="center">-0.1302</td><td align="center">0.2819</td><td align="center">-0.2352</td><td align="center">-0.0585</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">Pastizal</td><td align="center">-0.0629</td><td align="center">-0.3386</td><td align="center">0.2436</td><td align="center">-0.6616</td><td align="center">-0.1211</td></tr>
 
 
         </table>
@@ -507,15 +510,15 @@
         <table border=0
            style="background-color:lightgrey;width:100%;"
            class="table1">
-            <caption style="color:#555656;">Desviación residual: 1,180,767<br>
-            AIC: 1,180,797</caption>
+            <caption style="color:#555656;">Desviación residual: 1,180,771<br>
+            AIC: 1,180,801</caption>
 
                     <thead style="background-color:#66C802;color:white">
 
                         <tr style="background:green3;"><th class="word"> Clase</th> <th class="meaning">Intercept</th><th class="meaning">N</th><th class="meaning">S</th><th class="meaning">W</th><th class="meaning">Slope</th></tr></thead>
-                        <tr style="text-align:left;color:black;"><td align="center">Bosque denso</td><td align="center">0.0082</td><td align="center">0.0086</td><td align="center">0.0096</td><td align="center">0.0098</td><td align="center">0.0003</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">Matorral</td><td align="center">0.0102</td><td align="center">0.0111</td><td align="center">0.0136</td><td align="center">0.0144</td><td align="center">0.0006</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">Pastizal</td><td align="center">0.0108</td><td align="center">0.0113</td><td align="center">0.0160</td><td align="center">0.0157</td><td align="center">0.0008</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">Bosque siempreverde</td><td align="center">0.0072</td><td align="center">0.0095</td><td align="center">0.0086</td><td align="center">0.0093</td><td align="center">0.0003</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">Matorral</td><td align="center">0.0096</td><td align="center">0.0143</td><td align="center">0.0111</td><td align="center">0.0135</td><td align="center">0.0006</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">Pastizal</td><td align="center">0.0100</td><td align="center">0.0155</td><td align="center">0.0113</td><td align="center">0.0158</td><td align="center">0.0008</td></tr>
 
 
         </table>
@@ -528,25 +531,93 @@
                     <thead style="background-color:#66C802;color:white">
 
                         <tr style="background:green3;"><th class="word"> Clase</th> <th class="meaning">Intercept</th><th class="meaning">N</th><th class="meaning">S</th><th class="meaning">W</th><th class="meaning">Slope</th></tr></thead>
-                        <tr style="text-align:left;color:black;"><td align="center">Bosque denso</td><td align="center">0.4758</td><td align="center">1.0882</td><td align="center">0.8847</td><td align="center">1.2919</td><td align="center">1.0339</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">Matorral</td><td align="center">0.7465</td><td align="center">0.7543</td><td align="center">0.5962</td><td align="center">0.6622</td><td align="center">0.9430</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">Pastizal</td><td align="center">1.1981</td><td align="center">0.7837</td><td align="center">0.4044</td><td align="center">0.5586</td><td align="center">0.8859</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">Bosque siempreverde</td><td align="center">0.5177</td><td align="center">1.1872</td><td align="center">0.9189</td><td align="center">0.8130</td><td align="center">1.0339</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">Matorral</td><td align="center">0.5631</td><td align="center">0.8778</td><td align="center">1.3256</td><td align="center">0.7903</td><td align="center">0.9430</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">Pastizal</td><td align="center">0.9389</td><td align="center">0.7127</td><td align="center">1.2759</td><td align="center">0.5160</td><td align="center">0.8859</td></tr>
 
 
         </table>
         <br>
         <br>
-        En la Figura 3 se puede observar que la probabilidad de ocurrencia del <b>bosque denso</b> se ve
+        En la Figura 3 se puede observar que la probabilidad de ocurrencia del <b>bosque siempreverde</b> se ve
         influenciada por el aumento en los valores de la pendiente, principalmente en orientaciones
-        del terreno Este y Norte. El <b>bosque disperso</b> presenta mayores probabilidades de ocurrencia
+        del terreno Este y Norte. El <b>bosque senescente</b> presenta mayores probabilidades de ocurrencia
         cuando el valor de la pendiente está alrededor de la media (12 %) y en mayor magnitud para aquellas
         superficies de terreno con orientación Sur; las probabilidades caen cuando la pendiente supera el
         25%. En el caso del <b>pastizal</b> y del <b>matorral</b> se observa que sus probabilidades de
         ocurrecnia aumentan en pendientes con valores mínimos.
         <br>
         <br>
-        <img src="plot_prob.png" width="100%" alt="gráfica de probabilidades"><br>
+        <img src="plot_prob_acp.png" width="100%" alt="gráfica de probabilidades"><br>
         <i style="color:#555656;">Fig 3. Probabilidades de ocurrencia de las diferentes clases de vegetación
+            para diferentes valores de la pendiente y en las diferentes orientaciones del terreno.</i>.
+        <br>
+        <br>
+        <br>
+        <h2>Regresión logística sobre la clasificación IVV</h2>
+        <br>
+        <br>
+        <i style="color:#555656;">Tabla 10. Resultados del modelo de regresión logística.
+            <br>
+            <br>
+        Coeficientes.</i><br>
+        <table border=0
+           style="background-color:lightgrey;width:100%;"
+           class="table1">
+
+                    <thead style="background-color:#66C802;color:white">
+
+                        <tr style="background:green3;"><th class="word"> Clase</th> <th class="meaning">Intercept</th><th class="meaning">N</th><th class="meaning">S</th><th class="meaning">W</th><th class="meaning">Slope</th></tr></thead>
+                        <tr style="text-align:left;color:black;"><td align="center">Bosque siempreverde</td><td align="center">-0.9298</td><td align="center">0.2641</td><td align="center">-0.1475</td><td align="center">-0.3357</td><td align="center">0.0449</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">Matorral</td><td align="center">-0.6269</td><td align="center">-0.0893</td><td align="center">0.1797</td><td align="center">-0.0340</td><td align="center">-0.0531</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">Pastizal</td><td align="center">-0.2078</td><td align="center">-0.2622</td><td align="center">0.2612</td><td align="center">-0.4017</td><td align="center">-0.1057</td></tr>
+
+
+        </table>
+        <i style="color:#555656;">Error estándar</i><br>
+        <table border=0
+           style="background-color:lightgrey;width:100%;"
+           class="table1">
+            <caption style="color:#555656;">Desviación residual: 1,197,209<br>
+            AIC: 1,197,239</caption>
+
+                    <thead style="background-color:#66C802;color:white">
+
+                        <tr style="background:green3;"><th class="word"> Clase</th> <th class="meaning">Intercept</th><th class="meaning">N</th><th class="meaning">S</th><th class="meaning">W</th><th class="meaning">Slope</th></tr></thead>
+                        <tr style="text-align:left;color:black;"><td align="center">Bosque siempreverde</td><td align="center">0.0077</td><td align="center">0.0094</td><td align="center">0.0090</td><td align="center">0.0098</td><td align="center">0.0003</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">Matorral</td><td align="center">0.0097</td><td align="center">0.0134</td><td align="center">0.0112</td><td align="center">0.0127</td><td align="center">0.0006</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">Pastizal</td><td align="center">0.0100</td><td align="center">0.0142</td><td align="center">0.0112</td><td align="center">0.0143</td><td align="center">0.0007</td></tr>
+
+
+        </table>
+        <br>
+        <i style="color:#555656;">Valores exponenciales de los odds: probabilidad de ocurrencia</i>
+        <table border=0
+           style="background-color:lightgrey;width:100%;"
+           class="table1">
+
+                    <thead style="background-color:#66C802;color:white">
+
+                        <tr style="background:green3;"><th class="word"> Clase</th> <th class="meaning">Intercept</th><th class="meaning">N</th><th class="meaning">S</th><th class="meaning">W</th><th class="meaning">Slope</th></tr></thead>
+                        <tr style="text-align:left;color:black;"><td align="center">Bosque siempreverde</td><td align="center">0.3946</td><td align="center">1.3023</td><td align="center">0.8627</td><td align="center">0.7148</td><td align="center">1.0460</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">Matorral</td><td align="center">0.5342</td><td align="center">0.9144</td><td align="center">1.1969</td><td align="center">0.9664</td><td align="center">0.9482</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">Pastizal</td><td align="center">0.8123</td><td align="center">0.7693</td><td align="center">1.2985</td><td align="center">0.6691</td><td align="center">0.8996</td></tr>
+
+
+        </table>
+        <br>
+        <br>
+        En la Figura 4 se puede observar que la probabilidad de ocurrencia del <b>bosque siempreverde</b> se ve
+        influenciada por el aumento en los valores de la pendiente, principalmente en orientaciones
+        del terreno Este y Norte. El <b>bosque senescente</b> presenta mayores probabilidades de ocurrencia
+        cuando el valor de la pendiente está alrededor de la media (12 %) y en mayor magnitud para aquellas
+        superficies de terreno con orientación Sur; las probabilidades caen cuando la pendiente supera el
+        25%. En el caso del <b>pastizal</b> y del <b>matorral</b> se observa que sus probabilidades de
+        ocurrecnia aumentan en pendientes con valores mínimos.
+        <br>
+        <br>
+        <img src="plot_prob_ivv.png" width="100%" alt="gráfica de probabilidades"><br>
+        <i style="color:#555656;">Fig 4. Probabilidades de ocurrencia de las diferentes clases de vegetación
             para diferentes valores de la pendiente y en las diferentes orientaciones del terreno.</i>.
         <br>
         <br>
