@@ -619,8 +619,33 @@
             para diferentes valores de la pendiente y en las diferentes orientaciones del terreno.</i>.
         <br>
         <br>
+        <br>
+        <h2>Regresión lineal múltiple sobre la clasificación IVV</h2>
+        <br>
+        <br>
+        Se desarrolló un modelo de regresión múltiple donde la variable respuesta es
+        la información del índice de vigor veheyal (ivv) con dos variables predictivas
+        continuas: pendiente (slope) y aspecto del terreno.
+        En la Figura 5 se muestra la supergicie de respuesta para el modelo para el modelo
+        de regresión lineal múltiple:
+            <br>
+            <br>
+            &emsp;&emsp;ivv ~ slope + aspect + (slope * aspect)</i>.
+        <br>
+        <br>
+        Donde:<br>
+        ivv es la variable respuesta como el índice de vigor vegetal.<br>
+        slope es el porcentaje de pendiente del terreno.<br>
+        aspect es la orientación del terreno.
+        <br>
+        <br>
         <iframe src="https://renebec.github.io/linearMult3D/"
-        style="width:100%;height:500px;"></iframe>
+        style="width:100%;height:500px;" title="3D surface response"></iframe>
+        <i style="color:#555656;">Fig 5. Gráfica interactiva. Superficie de respuesta de la
+        regresión lineal múltiple. El eje x representa los valores de la pendiente;
+            el eje y representa los valores de aspecto donde 0 indica la
+            orientación Norte y 180 la orientación Sur.
+        <br>
         <br>
         Referencias:<br>
         https://stats.oarc.ucla.edu/r/dae/multinomial-logistic-regression/<br>
@@ -631,12 +656,8 @@
                 <button onclick="myFunction7()" id="myBtn7">Leer más</button>
         <br>
         <br>
-
     </section>
-        <br>
     </div>
-
-
 <footer style="color:beige;">
     Aguascalientes, México 2023-2024
 </footer>
