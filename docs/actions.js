@@ -109,3 +109,20 @@ function myFunction7() {
     moreText7.style.display = "inline";
   }
 }
+
+
+function myFunction8() {
+  var dots8 = document.getElementById("dots8");
+  var moreText8 = document.getElementById("more8");
+  var btnText8 = document.getElementById("myBtn8");
+
+  if (dots8.style.display === "none") {
+    dots8.style.display = "inline";
+    btnText8.innerHTML = "Leer más";
+    moreText8.style.display = "none";
+  } else {
+    dots8.style.display = "none";
+    btnText8.innerHTML = "Mostrar menos";
+    moreText8.style.display = "inline";
+  }
+}

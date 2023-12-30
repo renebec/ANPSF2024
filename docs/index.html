@@ -196,8 +196,8 @@
         <br>
         <br>
         <img src="view compare1.png" width="100%" alt="Corrección de iluminación por factor C"><br>
-        Figura 1. Imagen sin corrección de iluminación (a). Imagen con iluminación corregida por
-        método de factor C (b).
+        Figura 1. (A) Imagen sin corrección de iluminación; (B) Imagen con iluminación corregida por
+        método de factor C.
         <br>
         <br>
             Datos de elevación:<br>
@@ -213,36 +213,10 @@
     </section>
         <br>
         <br>
-        <header>
-    <h3>
-        4. Procesamiento de imágenes: análisis de componentes principales (ACP)
-    </h3>
-    </header>
-    <section>
-           El siguiente paso consistió en llevar cabo un análisis de componentes principales
-        (ACP) sobre los datos de las bandas corregidas de la escena MSI. Con este proceso se
-        <span id="dots4">...</span><span id="more4">
-        busca reducir la cantidad de información en un menor número de bandas llamadas
-        componentes principales que capturen la mayor cantidad de información en términos
-        de la varianza.
-        <br>
-        <br>
-        Salida:<br>
-        D:\Documents\GIS\IMG_SAT\S2A_MSIL1C_20230313T172111_N0509_R012_T13QGE_20230313T222343\C3_20230313\pca\pca
-        <br>
-        <br>
-        </span>
-                <button onclick="myFunction4()" id="myBtn4">Leer más</button>
-        <br>
-        <br>
-    </section>
-        <br>
-        <br>
-    </section>
 
         <header>
     <h3>
-        5. Procesamiento de imágenes: creación de un índice de vigor vegetal (IVV)
+        4. Procesamiento de imágenes: creación de un índice de vigor vegetal (IVV)
     </h3>
     </header>
     <section>
@@ -266,14 +240,12 @@
         <br>
         <br>
     </section>
-
         <br>
         <br>
-    </section>
 
         <header>
     <h3>
-        6. Clasificación de imágenes: k-means
+        5. Clasificación de imágenes: k-means
     </h3>
     </header>
     <section>
@@ -297,58 +269,7 @@
 
         <br>
         <br>
-        <h4>
-            Clasificación sobre la imagen ACP
-        </h4>
-        Una vez terminadas las iteraciones sobre la imagen ACP se obtuvo una imagen con 7 clases
-        mas otra clase correspondiente a todos aquellos pixeles NO clasificados para un total de 8 clases.
-        Sobre la imagen generada se procede a
-        crear las ROI para cada una de las clases. Una vez hecho esto, se nombran las ROI como
-        "pca roi n" donde n el número de identificación de clase. Se cargaron las ROI sobre
-        la imagen MSI multibanda y se analizó la separabilidad de las ROI. Se hizo la unión
-        de los pares de ROI 1 y 2, 4 y 5, así como 6 y 7 cuya separabilidad fue menor o igual a 0.5
-        (Tabla 4).
-        <br>
-        <br>
-        <i style="color:#555656;">Tabla 4. Separabilidad de las ROI en la clasificación
-        dada por la <b>imagen ACP</b></i>
-        <table border=0
-           style="background-color:lightgrey;width:100%;"
-           class="table1">
 
-                    <thead style="background-color:#66C802;color:white">
-
-                        <tr style="background:green3;"><th class="word"> ROI ID</th> <th class="meaning">ROI ID</th><th class="meaning">Separación</th></tr></thead>
-                        <tr style="text-align:left;color:black;"><td align="center">1</td><td align="center">2</td><td align="center">0.37</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">6</td><td align="center">7</td><td align="center">0.37</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">4</td><td align="center">5</td><td align="center">0.50</td></tr>
-
-        </table>
-        <br>
-        <br>
-        En la Tabla 5 se muestran los valores medios de reflectancia observados en cada clase y para
-        cada una de las bandas multiespectrales del sensor satelital MSI.
-        <br>
-        <br>
-        <i style="color:#555656;">Tabla 5. Valor medio de clase y desviación estándar para cada una de las bandas del sensor MSI
-        de acuerdo a las clases de la <b>imagen ACP</b>. Debe destacarse el aumento en la
-        diferencia entre los valores medios de las bandas 8 y 4, así como la disminución constante en
-        los valores medios de la banda 11 a través de las clases obtenidas.</i><br>
-        <table border=0
-           style="background-color:lightgrey;width:100%;"
-           class="table1">
-
-                    <thead style="background-color:#66C802;color:white">
-
-                        <tr style="background:green3;"><th class="word"> Clase</th> <th class="meaning" colspan="2">Banda 3<br>media-desv</th><th class="meaning" colspan="2">Banda 4<br>media-desv</th><th class="meaning" colspan="2">Banda 8<br>media-desv</th><th class="meaning" colspan="2">Banda 11<br>media-desv</th></tr></thead>
-                        <tr style="text-align:left;color:black;"><td align="center">Clase 1</td><td align="center">0.2352</td><td align="center">0.0175</td><td align="center">0.2686</td><td align="center">0.0232</td><td align="center">0.3416</td><td align="center">0.0231</td><td align="center">0.4479</td><td align="center">0.0322</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">Clase 2</td><td align="center">0.2096</td><td align="center">0.0097</td><td align="center">0.2321</td><td align="center">0.0111</td><td align="center">0.3064</td><td align="center">0.0124</td><td align="center">0.3958</td><td align="center">0.0166</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">Clase 3</td><td align="center">0.1916</td><td align="center">0.0083</td><td align="center">0.2065</td><td align="center">0.0103</td><td align="center">0.2810</td><td align="center">0.0144</td><td align="center">0.3484</td><td align="center">0.0186</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">Clase 4</td><td align="center">0.1788</td><td align="center">0.0057</td><td align="center">0.1824</td><td align="center">0.0101</td><td align="center">0.2668</td><td align="center">0.0174</td><td align="center">0.2908</td><td align="center">0.0198</td></tr>
-
-
-        </table>
-        <br>
         <br>
         <br>
         <h4>
@@ -408,7 +329,7 @@
         clasificación.
         <br>
         <br>
-        <img src="pca vs ivv.png" width="100%" alt="clasificación k means sobre pca y vvi"><br>
+        <img src="ivv clases.png" width="100%" alt="clasificación k means sobre pca y vvi"><br>
         <i style="color:#555656;">Fig 2. Comparativo de los resultados de los dos procesos de clasificación kmeans.
         Del lado izquierdo se muestra la <b>imagen ACP</b> con las clases obtenidas a partir de los
             <b>componentes principales</b>; del lado derecho se muestra la <b>imagen IVV</b> con el
@@ -432,10 +353,11 @@
                     <thead style="background-color:#66C802;color:white">
 
                         <tr style="background:green3;"><th class="word"> Clase</th> <th class="meaning">Nivel</th><th class="meaning">Descripción</th></tr></thead>
-                        <tr style="text-align:left;color:black;"><td align="center">1</td><td align="center">2</td><td align="center">Pastizal y suelo desnudo</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">2</td><td align="center">3</td><td align="center">Matorral disperso</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">3</td><td align="center">5</td><td align="center">Bosque denso senescente</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">4</td><td align="center">7</td><td align="center">Bosque denso siempre verde</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">1</td><td align="center">2</td><td align="center">Sin vegetación</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">2</td><td align="center">3</td><td align="center">Pastizal</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">3</td><td align="center">5</td><td align="center">Matorral senescente</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">4</td><td align="center">7</td><td align="center">Bosque perenifolio seco</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">4</td><td align="center">7</td><td align="center">Bosque perenifolio húmedo</td></tr>
 
         </table>
         <br>
@@ -468,94 +390,32 @@
         <br>
         <header>
     <h3>
-        7. Análisis de regresión
+        6. Análisis de regresión
     </h3>
     </header>
     <section>
-        Para realizar el análisis multinomial o categórico se utilizó la información raster
-        de topografía de la zona de estudio (aspecto y pendiente) así como la información categórica
-        de los clases de vegetación obtenidas mediante los dos procesos de clasificación de conglomerados.
-        El análisis de regresión logística multinomial
+        Se aplicaron dos procesos de análisis de regresión: a) regresión logística multinomial y b)
+        regresión lineal múltiple. Se utilizó la
+        información raster topográfica de la zona de estudio (aspecto y pendiente) así como la
+        información categórica de los clases de vegetación obtenidas mediante el proceso de
         <span id="dots7">...</span><span id="more7">
-        trabaja sobre una variable respuesta o dependiente de naturaleza categórica y, para este caso,
-        con dos variabes predictivas: una continua y otra categórica. El análisis busca detectar si
-        es que existe alguna influencia significativa de la topografía (aspecto y pendiente) sobre la
-        distribución de las clases de vegetación.
+        clasificación de conglomerados k-means. Para la regresión logística se analizaron un total de
+        503,014 observaciones, mientras que para la regresión lineal se analizaron un total de 505,085
+        observaciones.
         <br>
         <br>
-        Para poder llevar a cabo este análisis fue necesario hacer una preparación de los datos topográficos
-        de la zona de estudio. La información continua de la orientación o aspecto del terreno se
-        particionó en cuatro categorías: N, S, E y O.
-        <br>
-        <br>
-        <h4>Regresión logística multinomial sobre la clasificación ACP</h4>
-        <br>
-        <br>
-        <i style="color:#555656;">Tabla 9. Resultados del modelo de regresión logística.
-            <br>
-            <br>
-        Coeficientes.</i><br>
-        <table border=0
-           style="background-color:lightgrey;width:100%;"
-           class="table1">
 
-                    <thead style="background-color:#66C802;color:white">
-
-                        <tr style="background:green3;"><th class="word"> Clase</th> <th class="meaning">Intercept</th><th class="meaning">N</th><th class="meaning">S</th><th class="meaning">W</th><th class="meaning">Slope</th></tr></thead>
-                        <tr style="text-align:left;color:black;"><td align="center">Bosque siempreverde</td><td align="center">-0.6581</td><td align="center">0.1716</td><td align="center">-0.0845</td><td align="center">-0.2069</td><td align="center">0.0333</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">Matorral</td><td align="center">-0.5742</td><td align="center">-0.1302</td><td align="center">0.2819</td><td align="center">-0.2352</td><td align="center">-0.0585</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">Pastizal</td><td align="center">-0.0629</td><td align="center">-0.3386</td><td align="center">0.2436</td><td align="center">-0.6616</td><td align="center">-0.1211</td></tr>
-
-
-        </table>
-        <i style="color:#555656;">Error estándar</i><br>
-        <table border=0
-           style="background-color:lightgrey;width:100%;"
-           class="table1">
-            <caption style="color:#555656;">Desviación residual: 1,180,771<br>
-            AIC: 1,180,801</caption>
-
-                    <thead style="background-color:#66C802;color:white">
-
-                        <tr style="background:green3;"><th class="word"> Clase</th> <th class="meaning">Intercept</th><th class="meaning">N</th><th class="meaning">S</th><th class="meaning">W</th><th class="meaning">Slope</th></tr></thead>
-                        <tr style="text-align:left;color:black;"><td align="center">Bosque siempreverde</td><td align="center">0.0072</td><td align="center">0.0095</td><td align="center">0.0086</td><td align="center">0.0093</td><td align="center">0.0003</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">Matorral</td><td align="center">0.0096</td><td align="center">0.0143</td><td align="center">0.0111</td><td align="center">0.0135</td><td align="center">0.0006</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">Pastizal</td><td align="center">0.0100</td><td align="center">0.0155</td><td align="center">0.0113</td><td align="center">0.0158</td><td align="center">0.0008</td></tr>
-
-
-        </table>
         <br>
-        <i style="color:#555656;">Valores exponenciales de los odds: probabilidad de ocurrencia</i>
-        <table border=0
-           style="background-color:lightgrey;width:100%;"
-           class="table1">
-
-                    <thead style="background-color:#66C802;color:white">
-
-                        <tr style="background:green3;"><th class="word"> Clase</th> <th class="meaning">Intercept</th><th class="meaning">N</th><th class="meaning">S</th><th class="meaning">W</th><th class="meaning">Slope</th></tr></thead>
-                        <tr style="text-align:left;color:black;"><td align="center">Bosque siempreverde</td><td align="center">0.5177</td><td align="center">1.1872</td><td align="center">0.9189</td><td align="center">0.8130</td><td align="center">1.0339</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">Matorral</td><td align="center">0.5631</td><td align="center">0.8778</td><td align="center">1.3256</td><td align="center">0.7903</td><td align="center">0.9430</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">Pastizal</td><td align="center">0.9389</td><td align="center">0.7127</td><td align="center">1.2759</td><td align="center">0.5160</td><td align="center">0.8859</td></tr>
-
-
-        </table>
+        <h4>Regresión logística multinomial</h4>
         <br>
         <br>
-        En la Figura 3 se puede observar que la probabilidad de ocurrencia del <b>bosque siempreverde</b> se ve
-        influenciada por el aumento en los valores de la pendiente y es ligeramente superior en orientación
-        Norte. El <b>bosque senescente</b> presenta probabilidades de ocurrencia
-        constantes en un rango amplio de valores de pendiente y en mayor magnitud para aquellas
-        superficies de terreno con orientación Oeste. En el caso del <b>pastizal</b> se observa que las
-        probabilidades de ocurrencia aumentan en pendientes con valores mínimos.
-        <br>
-        <br>
-        <img src="plot_prob_acp.png" width="100%" alt="gráfica de probabilidades"><br>
-        <i style="color:#555656;">Fig 3. Probabilidades de ocurrencia de las diferentes clases de vegetación
-            para diferentes valores de la pendiente y en las diferentes orientaciones del terreno.</i>.
-        <br>
-        <br>
-        <br>
-        <h4>Regresión logística multinomial sobre la clasificación IVV</h4>
+        El análisis de regresión logística multinomial trabaja sobre
+
+        una variable respuesta o dependiente de naturaleza categórica y, para este caso,
+        con dos variabes predictivas: una continua (pendiente) y otra categórica (aspecto).
+        La variable <b>aspecto</b> se particionó en 4 categorías: Norte, Sur, Este y Oeste. El análisis
+        busca detectar si es que existe alguna influencia significativa de las variables topográficas
+        sobre la distribución de las clases de vegetación.
         <br>
         <br>
         <i style="color:#555656;">Tabla 10. Resultados del modelo de regresión logística.
@@ -569,9 +429,10 @@
                     <thead style="background-color:#66C802;color:white">
 
                         <tr style="background:green3;"><th class="word"> Clase</th> <th class="meaning">Intercept</th><th class="meaning">N</th><th class="meaning">S</th><th class="meaning">W</th><th class="meaning">Slope</th></tr></thead>
-                        <tr style="text-align:left;color:black;"><td align="center">Bosque siempreverde</td><td align="center">-0.9298</td><td align="center">0.2641</td><td align="center">-0.1475</td><td align="center">-0.3357</td><td align="center">0.0449</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">Matorral</td><td align="center">-0.6269</td><td align="center">-0.0893</td><td align="center">0.1797</td><td align="center">-0.0340</td><td align="center">-0.0531</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">Bosque ph</td><td align="center">-0.9298</td><td align="center">0.2641</td><td align="center">-0.1475</td><td align="center">-0.3357</td><td align="center">0.0449</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">Bosque ps</td><td align="center">-0.6269</td><td align="center">-0.0893</td><td align="center">0.1797</td><td align="center">-0.0340</td><td align="center">-0.0531</td></tr>
                         <tr style="text-align:left;color:black;"><td align="center">Pastizal</td><td align="center">-0.2078</td><td align="center">-0.2622</td><td align="center">0.2612</td><td align="center">-0.4017</td><td align="center">-0.1057</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">SN</td><td align="center">-0.2078</td><td align="center">-0.2622</td><td align="center">0.2612</td><td align="center">-0.4017</td><td align="center">-0.1057</td></tr>
 
 
         </table>
@@ -585,10 +446,10 @@
                     <thead style="background-color:#66C802;color:white">
 
                         <tr style="background:green3;"><th class="word"> Clase</th> <th class="meaning">Intercept</th><th class="meaning">N</th><th class="meaning">S</th><th class="meaning">W</th><th class="meaning">Slope</th></tr></thead>
-                        <tr style="text-align:left;color:black;"><td align="center">Bosque siempreverde</td><td align="center">0.0077</td><td align="center">0.0094</td><td align="center">0.0090</td><td align="center">0.0098</td><td align="center">0.0003</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">Matorral</td><td align="center">0.0097</td><td align="center">0.0134</td><td align="center">0.0112</td><td align="center">0.0127</td><td align="center">0.0006</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">Bosque ph</td><td align="center">0.0077</td><td align="center">0.0094</td><td align="center">0.0090</td><td align="center">0.0098</td><td align="center">0.0003</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">Bosque ps</td><td align="center">0.0097</td><td align="center">0.0134</td><td align="center">0.0112</td><td align="center">0.0127</td><td align="center">0.0006</td></tr>
                         <tr style="text-align:left;color:black;"><td align="center">Pastizal</td><td align="center">0.0100</td><td align="center">0.0142</td><td align="center">0.0112</td><td align="center">0.0143</td><td align="center">0.0007</td></tr>
-
+                        <tr style="text-align:left;color:black;"><td align="center">SN</td><td align="center">0.0100</td><td align="center">0.0142</td><td align="center">0.0112</td><td align="center">0.0143</td><td align="center">0.0007</td></tr>
 
         </table>
         <br>
@@ -600,10 +461,10 @@
                     <thead style="background-color:#66C802;color:white">
 
                         <tr style="background:green3;"><th class="word"> Clase</th> <th class="meaning">Intercept</th><th class="meaning">N</th><th class="meaning">S</th><th class="meaning">W</th><th class="meaning">Slope</th></tr></thead>
-                        <tr style="text-align:left;color:black;"><td align="center">Bosque siempreverde</td><td align="center">0.3946</td><td align="center">1.3023</td><td align="center">0.8627</td><td align="center">0.7148</td><td align="center">1.0460</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">Matorral</td><td align="center">0.5342</td><td align="center">0.9144</td><td align="center">1.1969</td><td align="center">0.9664</td><td align="center">0.9482</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">Bosque ph</td><td align="center">0.3946</td><td align="center">1.3023</td><td align="center">0.8627</td><td align="center">0.7148</td><td align="center">1.0460</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">Bosque ps</td><td align="center">0.5342</td><td align="center">0.9144</td><td align="center">1.1969</td><td align="center">0.9664</td><td align="center">0.9482</td></tr>
                         <tr style="text-align:left;color:black;"><td align="center">Pastizal</td><td align="center">0.8123</td><td align="center">0.7693</td><td align="center">1.2985</td><td align="center">0.6691</td><td align="center">0.8996</td></tr>
-
+                        <tr style="text-align:left;color:black;"><td align="center">SN</td><td align="center">0.8123</td><td align="center">0.7693</td><td align="center">1.2985</td><td align="center">0.6691</td><td align="center">0.8996</td></tr>
 
         </table>
         <br>
@@ -622,13 +483,13 @@
         <br>
         <br>
         <br>
-        <h4>Regresión lineal múltiple sobre la clasificación IVV</h4>
+        <h4>Regresión lineal múltiple</h4>
         <br>
         <br>
-        Se desarrolló un modelo de regresión múltiple donde la variable respuesta es
-        la información del índice de vigor veheyal (ivv) con dos variables predictivas
-        continuas: pendiente (slope) y aspecto del terreno.
-        En la Figura 5 se muestra la supergicie de respuesta para el modelo para el modelo
+        Se desarrolló un modelo de regresión múltiple donde la variable respuesta es continua
+        a partir de la información del índice de vigor vegetal (ivv). Del mismo modo se usaron dos
+        variables predictivas continuas: pendiente (slope) y aspecto del terreno.
+        En la Figura 5 se muestra la superficie de respuesta para el modelo
         de regresión lineal múltiple:
             <br>
             <br>
@@ -636,9 +497,9 @@
         <br>
         <br>
         Donde:<br>
-        ivv es la variable respuesta como el índice de vigor vegetal.<br>
-        slope es el porcentaje de pendiente del terreno.<br>
-        aspect es la orientación del terreno.
+        ivv: es la variable respuesta como el índice de vigor vegetal.<br>
+        slope: es el porcentaje de pendiente del terreno.<br>
+        aspect: es la orientación del terreno.
         <br>
         <br>
         <iframe src="https://renebec.github.io/linearMult3D/"
@@ -657,6 +518,24 @@
 <br>
         </span>
                 <button onclick="myFunction7()" id="myBtn7">Leer más</button>
+        <br>
+        <br>
+    </section>
+        <br>
+        <br>
+        <header>
+    <h3>
+        7. Análisis y discusión de resultados
+    </h3>
+    </header>
+    <section>
+           En contrucción
+        <span id="dots8">...</span><span id="more8">
+        <br><b style="color:red;">Estamos trabajando</b>
+        <br>
+        <br>
+        </span>
+                <button onclick="myFunction8()" id="myBtn8">Leer más</button>
         <br>
         <br>
     </section>
