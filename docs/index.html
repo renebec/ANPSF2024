@@ -274,6 +274,20 @@
         <h4>
             Clasificación por conglomerados k-means
         </h4>
+        Se trata de un algoritmo de clasificación iterativo en el que se asigna un número arbitrario de
+        categorías en las que serán clasificadas un conjunto de observaciones con magnitudes intrínsecas. El
+        algoritmo mide las "distancias" desde diferentes puntos iniciales y ajusta la posición del centro de
+        clase en función de las distancias promedio calculadas en cara iteración (Figura 2).
+        <br>
+        <br>
+        <!---<p style="text-align:center;"><iframe src="https://media.licdn.com/dms/image/C5612AQH8kEizAouznA/article-cover_image-shrink_600_2000/0/1626424726069?e=2147483647&v=beta&t=deUL_yPDFPXK8dkspX2oJZWX1qqyx3XBokl02TN8x9k"
+                                              style="width:95%;height:500px"></iframe></p>--->
+       <p style="text-align:center;"><iframe src="http://data-analysis-stats.jp/wp-content/uploads/2018/08/k-mean_animation.gif"
+        style="width:65%;height:320px;"></iframe></p>
+        <i style="color:#555656;">Fig 2. Representación animada del funcionamiento del algoritmo de
+        clasificación k-means</i>.
+        <br>
+        <br>
         Una vez concluidas las 50 iteraciones de la clasificación sobre el índice de verdor y vigor, se
         obtuvo la imagen IVV con 7 clases incluyendo otra mas con datos NO clasificados para un total de 8 clases.
         Se cargaron las ROI sobre la imagen MSI y se analizó la separabilidad de las ROI. Se hizo la unión
@@ -327,7 +341,7 @@
         <br>
         <br>
         <img src="ivv clases.png" width="100%" alt="clasificación k means sobre pca y vvi"><br>
-        <i style="color:#555656;">Fig 2. Resultados de la clasificación kmeans.
+        <i style="color:#555656;">Fig 3. Resultados de la clasificación kmeans.
         Del lado izquierdo se muestra una composición de imagen multiespectral del sensor MSI
             y del lado derecho se muestra la imagen clasificada a partir de los valres del índice <b>IVV</b></i>.
         <br>
