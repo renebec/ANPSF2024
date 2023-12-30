@@ -324,9 +324,9 @@
         Si bien se presenta nuevamente un aumento en la
         diferencia entre los valores medios de las bandas 8 y 4, y también se observa la disminución en
         los valores medios de la banda 11 a través de las clases obtenidas, el comportamiento es menos
-        consistente que lo observado anteriormente con los datos de la clasificación sobre la <b>imagen ACP</b>.
-        En la Figura 2 se muestra un comparativo entre las clases generadas por los dos procesos de
-        clasificación.
+        consistente que lo observado anteriormente con los datos de la clasificación sobre la <b>imagen ACP</b>
+        (Figura 2).
+
         <br>
         <br>
         <img src="ivv clases.png" width="100%" alt="clasificación k means sobre pca y vvi"><br>
@@ -339,12 +339,12 @@
         <br>
         Para ambos procesos de clasificación, al final se obtuvo una imagen raster con
         4 clases cuya descripción se muestran en la Tabla 8.
-        Las cuatro clases obtenidas representan 4 niveles de cobertura vegetal en función del verdor
+        Las cuatro clases obtenidas representan 5 categorías de cobertura vegetal en función del verdor
         y del contenido de humedad, aspectos que se expresan a través de las bandas 4, 8 y 11.
         <br>
         <br>
-        <i style="color:#555656;">Tabla 8. Descripción de las clases obtenidas por medio de los
-            procesos de clasificación.</i><br>
+        <i style="color:#555656;">Tabla 8. Descripción de las clases obtenidas por medio de la clasificación
+            k-means.</i><br>
         <table border=0
            style="background-color:lightgrey;width:100%;"
            class="table1">
@@ -363,8 +363,8 @@
         <br>
         <br>
         <br>
-        Para ambas clasificaciones se exportaron las ROI a imágenes clasificadas y posteriormente
-        a formato TIFF para su análisis en R en la siguiente sección.
+        Se generaron Regiones de Interés (ROI) para exportarlas como imágenes clasificadas y posteriormente
+        a formato TIFF para su análisis en R.
         <br>
         <br>
         Salida:<br>
@@ -393,7 +393,7 @@
     </h3>
     </header>
     <section>
-        Se aplicaron dos procesos de análisis de regresión: a) <b>regresión logística multinomial</b> y b)
+        Se aplicaron dos métodos de regresión: a) <b>regresión logística multinomial</b> y b)
         <b>regresión lineal múltiple</b>. Se utilizó la
         información raster topográfica de la zona de estudio (aspecto y pendiente) así como la
         información categórica de las clases de vegetación obtenidas mediante el proceso de
