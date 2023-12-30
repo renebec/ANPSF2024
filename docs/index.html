@@ -250,12 +250,29 @@
     </h3>
     </header>
     <section>
+         Se trata de un algoritmo de clasificación iterativo en el que se asigna un número arbitrario de
+        categorías en las que serán clasificadas un conjunto de observaciones con magnitudes intrínsecas
+        enmarcadas en un espacio vectorial n-dimensional. El
+        algoritmo mide las <span id="dots6">...</span><span id="more6"> "distancias" desde diferentes
+        puntos iniciales y ajusta la posición del centro de
+        clase en función de las distancias promedio calculadas en cara iteración (Figura 2).
+        <br>
+
+        <!---<p style="text-align:center;"><iframe src="https://media.licdn.com/dms/image/C5612AQH8kEizAouznA/article-cover_image-shrink_600_2000/0/1626424726069?e=2147483647&v=beta&t=deUL_yPDFPXK8dkspX2oJZWX1qqyx3XBokl02TN8x9k"
+                                              style="width:95%;height:500px"></iframe></p>--->
+        <br>
+       <p style="text-align:center;"><iframe src="http://shabal.in/visuals/kmeans/left.gif"
+        style="width:100%;height:520px;"></iframe></p>
+        <i style="color:#555656;">Fig 2. Representación animada del funcionamiento del algoritmo de
+        clasificación k-means</i>.
+        <br>
+        <br>
            Una vez procesados los datos de radiación registrados desde la plataforma
         satelital Sentinel 2 a través del sensor MSI, se realizaron dos procesos de
         clasificación no supervisada utilizando el
         software ENVI 5.3. El proceso de clasificación se hizo
         sobre la imgen del índice de verdor y vigor obteniendo
-        <span id="dots6">...</span><span id="more6">otra imagen clasificada que
+        otra imagen clasificada que
         llamamos <b>imagen IVV</b>. El
         método de clasificación fue por conglomerados k-means con los parámetros que
         a continuación se describen:
@@ -266,27 +283,13 @@
         Desviaciones desde la media: 7<br>
         Máxima distancia del error: 0.5
 
-        <br>
-        <br>
 
         <br>
         <br>
         <h4>
             Clasificación por conglomerados k-means
         </h4>
-        Se trata de un algoritmo de clasificación iterativo en el que se asigna un número arbitrario de
-        categorías en las que serán clasificadas un conjunto de observaciones con magnitudes intrínsecas. El
-        algoritmo mide las "distancias" desde diferentes puntos iniciales y ajusta la posición del centro de
-        clase en función de las distancias promedio calculadas en cara iteración (Figura 2).
-        <br>
 
-        <!---<p style="text-align:center;"><iframe src="https://media.licdn.com/dms/image/C5612AQH8kEizAouznA/article-cover_image-shrink_600_2000/0/1626424726069?e=2147483647&v=beta&t=deUL_yPDFPXK8dkspX2oJZWX1qqyx3XBokl02TN8x9k"
-                                              style="width:95%;height:500px"></iframe></p>--->
-        <br>
-       <p style="text-align:center;"><iframe src="http://data-analysis-stats.jp/wp-content/uploads/2018/08/k-mean_animation.gif"
-        style="width:65%;height:320px;"></iframe></p>
-        <i style="color:#555656;">Fig 2. Representación animada del funcionamiento del algoritmo de
-        clasificación k-means</i>.
         <br>
         <br>
         Una vez concluidas las 50 iteraciones de la clasificación sobre el índice de verdor y vigor, se
