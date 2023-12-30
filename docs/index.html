@@ -473,6 +473,7 @@
         probabilidades de ocurrecnia cuando los valores de la pendiente son mínimos.
         <br>
         <br>
+        <br>
         <img src="plot_prob_ivv.png" width="100%" alt="gráfica de probabilidades"><br>
         <i style="color:#555656;">Fig 4. Probabilidades de ocurrencia de las diferentes clases de vegetación
             para diferentes valores de la pendiente y en las diferentes orientaciones del terreno.</i>.
@@ -489,13 +490,50 @@
         de regresión lineal múltiple:
             <br>
             <br>
-            &emsp;&emsp;ivv ~ slope + aspect + (slope * aspect)</i>.
+            &emsp;&emsp;<i>ivv ~ slope + aspect + (slope * aspect)</i>
         <br>
         <br>
         Donde:<br>
         ivv: es la variable respuesta como el índice de vigor vegetal.<br>
         slope: es el porcentaje de pendiente del terreno.<br>
         aspect: es la orientación del terreno.
+        <br>
+        <br>
+        <i style="color:#555656;">Tabla 11. Resultados del modelo de regresión lineal.</i>
+            <br>
+            <br>
+        </table>
+        <i style="color:#555656;">Coeficientes:</i>
+        <table border=0
+           style="background-color:lightgrey;width:100%;"
+           class="table1">
+
+            <caption style="color:#555656;">Multiple R<sup>2</sup>: 0.1424<br>
+
+
+                    <thead style="background-color:#66C802;color:white">
+
+                        <tr style="background:green3;"><th class="word"></th> <th class="meaning">Estimado</th><th class="meaning">Error estándar</th><th class="meaning">t</th><th class="meaning">valor p</th></tr></thead>
+                        <tr style="text-align:left;color:black;"><td align="center">Intercept</td><td align="center">2.73<sup>-1</sup></td><td align="center">2.277<sup>-4</sup></td><td align="center">1,198.61</td><td align="center">0.0000</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">slope</td><td align="center">1.536<sup>-3</sup></td><td align="center">1.317<sup>-5</sup></td><td align="center">116.6</td><td align="center">0.0000</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">aspect</td><td align="center">-2.1<sup>-5</sup></td><td align="center">2.038<sup>-6</sup></td><td align="center">-10.3</td><td align="center">0.0000</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">slope:aspect</td><td align="center">-3.625<sup>-6</sup></td><td align="center">1.235<sup>-7</sup></td><td align="center">-29.34</td><td align="center">0.0000</td></tr>
+
+        </table>
+        <br>
+        <br>
+        Con los datos de los coeficientes se construyó la siguiente superficie de respuesta:
+        <br>
+        <br>
+        &emsp;&emsp;m = 2.730<sup>-1</sup> + 1.536<sup>-3</sup> x<sub>1</sub> + (-2.1<sup>-5</sup> x<sub>2</sub>) + (-3.625<sup>-6</sup> (x<sub>1</sub>) (x<sub>2</sub>))
+        <br>
+        <br>
+        La superficie de respuesta de
+        la Figura 5 muestra como los valores pequeños de la pendiente no influye
+        en la respuesta de la vegetación a través de los diferentes ángulos de orientación del terreno;
+        en contraste, cuando los valores de la pendiente alcanzan los valores más altos se presenta
+        una respuesta superior de la vegetación hacia superficies con orientación Norte.
+        <br>
         <br>
         <br>
         <iframe src="https://renebec.github.io/linearMult3D/"
