@@ -83,10 +83,7 @@
                         <tr style="text-align:left;color:black;">  <td> 12</td><td align="center">2,202.4</td><td>174</td><td>20</td></tr>
                  </table>
         <br>
-        <br>
-        Escena descargada:<br>
-        D:\Documents\GIS\IMG_SAT\S2A_MSIL1C_20230313T172111_N0509_R012_T13QGE_20230313T222343\
-        <br>
+        
         <br>
         </span>
                 <button onclick="myFunction()" id="myBtn">Leer más</button>
@@ -97,11 +94,11 @@
         <br>
     <header>
     <h3>
-        2. Preprocesamiento de imágenes: corrección atmosférica DOS
+        2. Corrección atmosférica Dark Object Substraction (DOS)
     </h3>
     </header>
     <section>
-           Se utilizó el software QGIS para realizar el procedimiento de corrección
+           Se realizó un procedimiento de corrección
         atmosférica por el método mejorado de objeto negro propuesto por Chávez (1996)
         <text style="color:red;">-rastrear fuente original-</text>
         y para cada una de las bandas de la escena MSI.
@@ -111,12 +108,7 @@
         una corrección de iluminación por topográfía.
         <br>
         <br>
-            Polígono:<br>
-        D:\Documents\GIS\IMG_SAT\S2A_MSIL1C_20230313T172111_N0509_R012_T13QGE_20230313T222343\ANPSF_2023_ZONA.shp<br>
-            Salida:<br>
-        D:\Documents\GIS\IMG_SAT\S2A_MSIL1C_20230313T172111_N0509_R012_T13QGE_20230313T222343\DOS_20230313\DOS_20230313<br>
-        <br>
-        <br>
+            
         </span>
                 <button onclick="myFunction2()" id="myBtn2">Leer más</button>
         <br>
@@ -130,7 +122,7 @@
     </h3>
     </header>
     <section>
-           Se utilizó el software SAGA incluido en QGIS así como el <b>Modelo de Elevación de Terreno</b> (MET) para
+           Se utilizó el <b>Modelo de Elevación de Terreno</b> (MET) para
         realizar el procedimiento de corrección de iluminación topográfica por el método de <b>factor C</b>
         aplicado a las bandas 3, 4, 8 y 11 de la escena MSI. El MET se obtuvo
         <span id="dots3">...</span><span id="more3">
@@ -201,11 +193,7 @@
         método de factor C.
         <br>
         <br>
-            Datos de elevación:<br>
-        D:\Documents\GIS\AGS_ANPSF\ANPSF_2023\MED_20230313_ANPSF.tif<br>
-            Salida:<br>
-        D:\Documents\GIS\IMG_SAT\S2A_MSIL1C_20230313T172111_N0509_R012_T13QGE_20230313T222343\C3_20230313\C_20230313_B0stack_raster.tif
-        <br>
+            
         <br>
         </span>
                 <button onclick="myFunction3()" id="myBtn3">Leer más</button>
@@ -384,25 +372,6 @@
         <br>
         <br>
         <br>
-        Fuentes:<br>
-        https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5148156/<br>
-        https://macwright.com/2013/02/18/literate-jenks.html<br>
-        https://stackoverflow.com/questions/54841674/plot-kmeans-clusters-and-classification-for-1-dimensional-data<br>
-        https://www.dannyadam.com/blog/2019/07/kmeans1d-globally-optimal-efficient-1d-k-means/<br>
-        https://pypi.org/project/kmeans1d/<br>
-        https://arxiv.org/abs/1701.07204<br>
-        https://www.scielo.org.mx/scielo.php?script=sci_arttext&pid=S1405-04712011000300004<br>
-        Salida:<br>
-        D:\Documents\GIS\IMG_SAT\S2A_MSIL1C_20230313T172111_N0509_R012_T13QGE_20230313T222343\CLASSIFY_LANDCOVER\kmeans pca.hdr<br>
-        D:\Documents\GIS\IMG_SAT\S2A_MSIL1C_20230313T172111_N0509_R012_T13QGE_20230313T222343\CLASSIFY_LANDCOVER\kmeans ivv.hdr<br>
-        D:\Documents\GIS\IMG_SAT\S2A_MSIL1C_20230313T172111_N0509_R012_T13QGE_20230313T222343\CLASSIFY_LANDCOVER\roi pca.roi<br>
-        D:\Documents\GIS\IMG_SAT\S2A_MSIL1C_20230313T172111_N0509_R012_T13QGE_20230313T222343\CLASSIFY_LANDCOVER\roi pca union.roi<br>
-        D:\Documents\GIS\IMG_SAT\S2A_MSIL1C_20230313T172111_N0509_R012_T13QGE_20230313T222343\CLASSIFY_LANDCOVER\roi ivv.roi<br>
-        D:\Documents\GIS\IMG_SAT\S2A_MSIL1C_20230313T172111_N0509_R012_T13QGE_20230313T222343\CLASSIFY_LANDCOVER\roi ivv union.roi<br>
-        D:\Documents\GIS\IMG_SAT\S2A_MSIL1C_20230313T172111_N0509_R012_T13QGE_20230313T222343\CLASSIFY_LANDCOVER\roi pca to tif.tif<br>
-        D:\Documents\GIS\IMG_SAT\S2A_MSIL1C_20230313T172111_N0509_R012_T13QGE_20230313T222343\CLASSIFY_LANDCOVER\roi ivv to tif.tif
-        <br>
-        <br>
         </span>
                 <button onclick="myFunction6()" id="myBtn6">Leer más</button>
         <br>
@@ -572,14 +541,7 @@
             orientación Norte y 180 la orientación Sur.</i>
         <br>
         <br>
-        Referencias:<br>
-        https://stats.oarc.ucla.edu/r/dae/multinomial-logistic-regression/<br>
-        https://stats.oarc.ucla.edu/other/examples/icda/<br>
-        https://www.ibm.com/docs/es/spss-statistics/saas?topic=regression-multinomial-logistic<br>
-        https://www.ibm.com/es-es/topics/monte-carlo-simulation#:~:text=La%20simulaci%C3%B3n%20Montecarlo%2C%20tambi%C3%A9n%20conocida%20como%20el%20m%C3%A9todo,estimar%20los%20posibles%20resultados%20de%20un%20suceso%20incierto.<br>
-        https://graphics.stanford.edu/courses/cs233-21-spring/ReferencedPapers/CCA_Weenik.pdf<br>
-        https://www.library.virginia.edu/data/articles/getting-started-with-multivariate-multiple-regression<br>
-        https://stats.oarc.ucla.edu/r/dae/canonical-correlation-analysis/<br>
+    
             <br>
 <br>
         </span>
