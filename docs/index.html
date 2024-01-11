@@ -8,7 +8,7 @@
     <meta name="keywords" content="ANPSF, forest, teledetection, remote sensing"/>
     <link rel="stylesheet" href="estilos.css">
 </head>
-<body>
+<body style="color:#493535">
 <script src="actions.js"></script>
     <div class="agrupar1">
     <header>
@@ -134,7 +134,12 @@
             biophysical properties mapping [1-3]. It is because the reflectance recorded
             on each pixel is the function of the interaction between downwelling irradiances
             and object's reflecting tissues. It is important to minimise or remove any
-            additional reflectance not originated from the object of interest.</text>
+            additional reflectance not originated from the object of interest.
+        <br>
+        <br>
+        The success of DOS highly relies on the availability and the quality of the dark target. Theoretically,
+            due to the response to the downwelling irradiances, the most effective dark target would be
+            optically-deep water.</text>
         <br>
         <br>
            Se utilizó el software QGIS para realizar el procedimiento de corrección
@@ -149,7 +154,7 @@
         <hr />
         <br>
         <br>
-        <text style="color:#707050">
+        <text style="color:#707050"><i>
             Polígono:<br>
         D:\Documents\GIS\IMG_SAT\S2A_MSIL1C_2023...43\ANPSF_2023_ZONA.shp<br>
             Salida:<br>
@@ -178,24 +183,44 @@
             pigments [6].<br>
             One of many methods to minimise path-radiance is dark-object subtraction (DOS)
             atmospheric correction method [3, 9-11]. This method is known for its effectiveness
-            and simplicity, and has been used for various biophysical remote-sensing researches
+                and simplicity, and has been used for various biophysical remote-sensing researches
+
 
         <br>
         Link <br>&#128071;<br>
-            <text style="color:#707050;">https://link.springer.com/chapter/10.1007/978-981-19-4200-6_8</text>
+            https://link.springer.com/chapter/10.1007/978-981-19-4200-6_8
             <br>
             <br>
             An Improved Dark Object Subtraction (IDOS) method is proposed in this paper. The new
             method retrieves the ancillary information on the aerosol optical depth (AOD) and total
             water vapor (TWV) from the multi-spectral information. The AOD and TWV obtained from the
             retrieval are used to optimize the DOS model. The experiment is carried out using data
-            of Sentinel-2, which carries a Multispectral Instrument (MSI).
+                of Sentinel-2, which carries a Multispectral Instrument (MSI).
             <br>
         Link <br>&#128071;<br>
-            <text style="color:#707050;">https://link.springer.com/chapter/10.1007/978-981-13-9917-6_41</text>
+            https://link.springer.com/chapter/10.1007/978-981-13-9917-6_41
             <br>
-            </text>
+            <br>
+            <text style="color:purple;">The success of DOS highly relies on the availability and the quality of the dark target.
+            Theoretically, due to the response to the downwelling irradiances, the most effective dark
+                  target would be optically-deep water.<br></text>
+            Link <br>&#128071;<br>
+            https://ietresearch.onlinelibrary.wiley.com/doi/10.1049/iet-ipr.2017.0295
+            <br>
+            <br>
+            The basic assumption is that
+            within the image some pixels are in complete shadow and
+            their radiances received at the satellite are due to atmospheric
+            scattering (path radiance). This assumption is combined with the
+            fact that very few targets on the Earth's
+            surface are absolute black, so an assumed one-percent minimum reflectance
+            is better than zero perce<br>
+            Link <br>&#128071;<br>
+            https://static1.1.sqspcdn.com/static/f/891472/15133582/1321370214637/Chavez_P.S._1996.pdf
+            <br>
+            </text></i>
         <br>
+
         <br>
         </span>
                 <button onclick="myFunction2()" id="myBtn2">Leer más</button>
@@ -303,7 +328,7 @@
         <hr />
         <br>
         <br>
-        <text style="color:#707050">
+        <text style="color:#707050"><i>
             Datos de elevación:<br>
         D:\Documents\GIS\AGS_ANPSF\ANPSF_2023\MED_20230313_ANPSF.tif<br>
             Salida:<br>
@@ -311,7 +336,6 @@
         <br>
         <br>
         <br>
-        <i>
         This paper aims to evaluate different methods for topographic correction of Landsat TM-ETM+ data.
             They were assessed for 15 ETM+ images taken under different illumination conditions, using two
             criteria: (a) reduction of the standard deviation (SD) for different land-covers and (b) increase
@@ -322,7 +346,7 @@
             were larger than 100% for the C-correction and the empiric–statistic correction method compared to
             the other correction methods in the visible spectrum and larger than 50% in the IR region.<br>
             Link <br>&#128071;<br>
-            <text style="color:#707050;">https://www.sciencedirect.com/science/article/abs/pii/S0303243411000584</text>
+            https://www.sciencedirect.com/science/article/abs/pii/S0303243411000584
         <br>
             <br>
             <text style="color:purple;">In mountainous environments, topography strongly affects the reflectance due to illumination
@@ -337,7 +361,7 @@
             corrected imagery, <text style="color:purple;">resulted in significantly (p ≤ 0.05) higher classification accuracies and better
             forest classifications, especially for the mixed forests.</text> <br>
             Link <br>&#128071;<br>
-            <text style="color:#707050;">https://www.sciencedirect.com/science/article/pii/S0303243422000423</text>
+            https://www.sciencedirect.com/science/article/pii/S0303243422000423
             <br>
             <br>
             Semi-empirical topographic normalization methods (e.g., C-correction) have been widely used to
@@ -345,7 +369,7 @@
             examine the precision and accuracy of the C-correction's empirical parameter, c, as a function
             of the sample from which it was derived.<br>
             Link <br>&#128071;<br>
-            <text style="color:#707050;">https://www.sciencedirect.com/science/article/abs/pii/S0034425711000411</text>
+            https://www.sciencedirect.com/science/article/abs/pii/S0034425711000411
             <br>
             <br>
             Different approaches have been developed to reduce topographical effects but each method has
@@ -354,7 +378,7 @@
             is needed with imagery on a global basis to derive guidelines on which method performs best
             under which situation.<br>
             Link <br>&#128071;<br>
-            <text style="color:#707050;">https://www.researchgate.net/publication/270895671_Review_of_Different_Topographic_Correction_Techniques_for_Satellite_Imagery</text>
+            https://www.researchgate.net/publication/270895671_Review_of_Different_Topographic_Correction_Techniques_for_Satellite_Imagery
             <br>
             <br>
             <text style="color:purple;">Steep terrain produces a topographic effect in digital satellite data that can make it difficult
@@ -365,7 +389,7 @@
             are described, including the Regression model, Lambertian model, C-correction model, Minnaert model,
             and SCS model.<br>
             Link <br>&#128071;<br>
-            <text style="color:#707050;">https://www.researchgate.net/publication/259275014_Topographic_correction_of_satellite_images_Theory_and_application</text>
+            https://www.researchgate.net/publication/259275014_Topographic_correction_of_satellite_images_Theory_and_application
             <br>
 
         </i></text>
@@ -444,7 +468,7 @@
         <hr />
         <br>
         <br>
-        <text style="color:#707050">
+        <text style="color:#707050"><i>
             Salida:<br>
         D:\Documents\GIS\IMG_SAT\S2A_MSIL1C_2023...\INDEX VVI
         <br>
@@ -454,12 +478,12 @@
             <br>
             <br>
             <br>
-        <text style="color:purple;"><i>Remote sensing phenology studies use data gathered by satellite sensors that measure
+        <text style="color:purple;">Remote sensing phenology studies use data gathered by satellite sensors that measure
             wavelengths of light absorbed and reflected by green plants. Certain pigments in plant
             leaves strongly absorb wavelengths of visible (red) light. The leaves themselves strongly
             reflect wavelengths of near-infrared light, which is invisible to human eyes.</text><br>
             Link <br>&#128071;<br>
-            <text style="color:#707050;">https://www.usgs.gov/special-topics/remote-sensing-phenology/science/vegetation-indices#:~:text=Vegetation%20Indices%20Remote%20sensing%20phenology%20studies%20use%20data,leaves%20strongly%20absorb%20wavelengths%20of%20visible%20%28red%29%20light.</text>
+            https://www.usgs.gov/special-topics/remote-sensing-phenology/science/vegetation-indices#:~:text=Vegetation%20Indices%20Remote%20sensing%20phenology%20studies%20use%20data,leaves%20strongly%20absorb%20wavelengths%20of%20visible%20%28red%29%20light.
         <br>
         <br>
             NDVI assists in forecasting fire zones, extracting vegetation health information, and
@@ -470,7 +494,7 @@
             computing the difference between visible and near-infrared reflectance to estimate the
         concentration of greens vegetation in a particular area (Weier & Herring, 2000)</text>.<br>
             Link <br>&#128071;<br>
-            <text style="color:#707050;">https://www.sciencedirect.com/topics/earth-and-planetary-sciences/vegetation-index</text>
+            https://www.sciencedirect.com/topics/earth-and-planetary-sciences/vegetation-index
         <br>
         <br>
             [...]Remote sensed information of growth, vigor, and their dynamics from terrestrial
@@ -487,12 +511,12 @@
             electromagnetic spectrum (spectral reflectance or emission characteristics of vegetation)
             is determined by chemical and morphological characteristics of the surface of organs or
             leaves [3]. <text style="color:purple;">The main applications for remote sensing of vegetation are based on the following
-            light spectra: (i) the ultraviolet region (UV), which goes from 10 to 380 nm; (ii) the
-            visible spectra, which are composed of the blue (450–495 nm), green (495−570 nm),
-            and red (620–750 nm) wavelength regions; and (iii) the near and mid infrared band
-        (850–1700 nm) [11, 12].</text><br>
+            light spectra: (i) the ultraviolet region (UV), which goes from 10 to 380nm; (ii) the
+            visible spectra, which are composed of the blue (450–495nm), green (495−570nm),
+            and red (620–750nm) wavelength regions; and (iii) the near and mid infrared band
+        (850–1700nm) [11, 12].</text><br>
             Link <br>&#128071;<br>
-            <text style="color:#707050;">https://www.hindawi.com/journals/js/2017/1353691/</text>
+            https://www.hindawi.com/journals/js/2017/1353691/
             <br>
             <br>
             <text style="color:purple;">Forests are an indispensable foundation of life for humans. They fulfil multiple functions
@@ -518,12 +542,11 @@
             such as diameter at breast height (DBH), per cent crown cover, tree age class, tree height, basal
             area, tree volume and aboveground living biomass.<br>
             Link <br>&#128071;<br>
-            <text style="color:#707050;">https://link.springer.com/chapter/10.1007/978-981-19-4200-6_8</text>
+            https://link.springer.com/chapter/10.1007/978-981-19-4200-6_8
             <br>
             <br>
-            </i>
-        <br>
-            </text>
+            <br>
+           </i> </text>
         </span>
                 <button onclick="myFunction5()" id="myBtn5">Leer más</button>
     </section>
