@@ -39,6 +39,10 @@
             forest cover assessment. Satellite images permit the observation of large geographical areas and
         can be repeated at short time intervals.</text>
         <br>
+        Link <br>&#128071;<br>
+            <text style="color:#707050;">https://link.springer.com/chapter/10.1007/978-981-19-4200-6_8</text>
+            <br>
+            <br>
         <br>
         <hr />
         <br>
@@ -55,11 +59,13 @@
         <a href="https://scihub.copernicus.eu/" target="_blank" style="color:#003180;"> Copernicus </a> de
         la <b>Agencia Espacial Europea</b> (ESA por sus siglas en inglés). Las características
         de la imagen
-            <span id="dots">...</span><span id="more"> se describen a continuación:
+             se describen a continuación: <span id="dots">...</span><span id="more">
         <br>
         <br>
-        SENTINEL-2 lleva un instrumento óptico que muestrea 13 bandas espectrales:
-        cuatro bandas a 10 m, seis bandas a 20 m y tres bandas a una resolución espacial de 60 m.
+        <text style="color:purple;">SENTINEL-2 lleva un instrumento óptico que muestrea 13 bandas espectrales:
+        cuatro bandas a 10 m, seis bandas a 20 m y
+
+                tres bandas a una resolución espacial de 60 m.
         La anchura de la franja orbital es de 290 km. Se obtuvo una escena nivel 1C con datos
         de reflectancia TOA con geometría geográfica. Los gránulos, también llamados teselas, son
         ortoimágenes de 110x110 km2 en proyección UTM/WGS84.
@@ -73,7 +79,7 @@
         y su atmósfera es recogida por un telescopio de tres espejos (M1, M2 y M3) y enfocada, a
         través de un divisor de haz, en dos conjuntos de plano focal (FPA): uno para las diez
         longitudes de onda VNIR y otro para las tres longitudes de onda SWIR. En la Tabla 1 se
-        muestra la descripción de las 13 bandas del sensor MSI.
+            muestra la descripción de las 13 bandas del sensor MSI.</text>
         <br>
         <br>
         <br>
@@ -120,18 +126,23 @@
         <br>
     <header>
     <h3>
-        2. Corrección atmosférica Dark Object Substraction (DOS)
+        2. Corrección atmosférica
     </h3>
     </header>
     <section>
+        <text style="color:purple;">Atmospheric correction is an important procedure during remote sensing for
+            biophysical properties mapping [1-3]. It is because the reflectance recorded
+            on each pixel is the function of the interaction between downwelling irradiances
+            and object's reflecting tissues. It is important to minimise or remove any
+            additional reflectance not originated from the object of interest.</text>
+        <br>
+        <br>
            Se utilizó el software QGIS para realizar el procedimiento de corrección
-        atmosférica por el método mejorado de objeto negro propuesto por Chávez (1996)
-        <text style="color:red;">-rastrear fuente original-</text>
+        atmosférica por el método de <b>Dark Object Substraction</b> (DOS)
         y para cada una de las bandas de la escena MSI.
         <span id="dots2">...</span><span id="more2">
-        Previo a la corrección se hizo un recorte de la escena utilizando un polígono de formato shapefile.
-        Con los datos de reflectancia corregidos se procedió posteriormente a realizar
-        una corrección de iluminación por topográfía.
+        Previo a la corrección se hizo un recorte de la escena utilizando un polígono de formato
+        shapefile.
         <br>
         <br>
         <br>
@@ -144,6 +155,46 @@
             Salida:<br>
         D:\Documents\GIS\IMG_SAT\S2A_MSIL1C_2023...43\DOS_20230313\DOS_20230313<br>
         </text>
+        <br>
+        <br>
+        <br>
+        <text style="color:#707050">
+        [...]One of the most effective atmospheric correction methods is dark-object
+        subtraction (DOS) method, where the atmospheric offset can be generated from
+        the image itself. The success of DOS strongly relies on the availability and
+        quality of the dark target. Based on the response to the downwelling irradiances,
+        the most effective dark target would be optically-deep water[...]<br>
+            [...]DOS method is more efficient and effective than more robust atmospheric
+            correction method[...]<br>
+            <text style="color:purple;">Atmospheric correction is an important procedure during remote sensing for
+            biophysical properties mapping [1-3]. It is because the reflectance recorded
+            on each pixel is the function of the interaction between downwelling irradiances
+            and object's reflecting tissues. It is important to minimise or remove any
+                additional reflectance not originated from the object of interest.</text><br>
+            The reflectance of vegetation in the visible bands is the function of the
+            interaction between leaf pigments and the downwelling irradiances [5]. On healthy
+            vegetation, visible bands, especially blue and red bands should have low reflectance
+            due to the strong chlorophyll absorption and some minor absorption of other accessory
+            pigments [6].<br>
+            One of many methods to minimise path-radiance is dark-object subtraction (DOS)
+            atmospheric correction method [3, 9-11]. This method is known for its effectiveness
+            and simplicity, and has been used for various biophysical remote-sensing researches
+
+        <br>
+        Link <br>&#128071;<br>
+            <text style="color:#707050;">https://link.springer.com/chapter/10.1007/978-981-19-4200-6_8</text>
+            <br>
+            <br>
+            An Improved Dark Object Subtraction (IDOS) method is proposed in this paper. The new
+            method retrieves the ancillary information on the aerosol optical depth (AOD) and total
+            water vapor (TWV) from the multi-spectral information. The AOD and TWV obtained from the
+            retrieval are used to optimize the DOS model. The experiment is carried out using data
+            of Sentinel-2, which carries a Multispectral Instrument (MSI).
+            <br>
+        Link <br>&#128071;<br>
+            <text style="color:#707050;">https://link.springer.com/chapter/10.1007/978-981-13-9917-6_41</text>
+            <br>
+            </text>
         <br>
         <br>
         </span>
@@ -271,7 +322,7 @@
             were larger than 100% for the C-correction and the empiric–statistic correction method compared to
             the other correction methods in the visible spectrum and larger than 50% in the IR region.<br>
             Link <br>&#128071;<br>
-            <text style="color:blue;">https://www.sciencedirect.com/science/article/abs/pii/S0303243411000584</text>
+            <text style="color:#707050;">https://www.sciencedirect.com/science/article/abs/pii/S0303243411000584</text>
         <br>
             <br>
             <text style="color:purple;">In mountainous environments, topography strongly affects the reflectance due to illumination
@@ -286,7 +337,7 @@
             corrected imagery, <text style="color:purple;">resulted in significantly (p ≤ 0.05) higher classification accuracies and better
             forest classifications, especially for the mixed forests.</text> <br>
             Link <br>&#128071;<br>
-            <text style="color:blue;">https://www.sciencedirect.com/science/article/pii/S0303243422000423</text>
+            <text style="color:#707050;">https://www.sciencedirect.com/science/article/pii/S0303243422000423</text>
             <br>
             <br>
             Semi-empirical topographic normalization methods (e.g., C-correction) have been widely used to
@@ -294,7 +345,7 @@
             examine the precision and accuracy of the C-correction's empirical parameter, c, as a function
             of the sample from which it was derived.<br>
             Link <br>&#128071;<br>
-            <text style="color:blue;">https://www.sciencedirect.com/science/article/abs/pii/S0034425711000411</text>
+            <text style="color:#707050;">https://www.sciencedirect.com/science/article/abs/pii/S0034425711000411</text>
             <br>
             <br>
             Different approaches have been developed to reduce topographical effects but each method has
@@ -303,7 +354,7 @@
             is needed with imagery on a global basis to derive guidelines on which method performs best
             under which situation.<br>
             Link <br>&#128071;<br>
-            <text style="color:blue;">https://www.researchgate.net/publication/270895671_Review_of_Different_Topographic_Correction_Techniques_for_Satellite_Imagery</text>
+            <text style="color:#707050;">https://www.researchgate.net/publication/270895671_Review_of_Different_Topographic_Correction_Techniques_for_Satellite_Imagery</text>
             <br>
             <br>
             <text style="color:purple;">Steep terrain produces a topographic effect in digital satellite data that can make it difficult
@@ -314,7 +365,7 @@
             are described, including the Regression model, Lambertian model, C-correction model, Minnaert model,
             and SCS model.<br>
             Link <br>&#128071;<br>
-            <text style="color:blue;">https://www.researchgate.net/publication/259275014_Topographic_correction_of_satellite_images_Theory_and_application</text>
+            <text style="color:#707050;">https://www.researchgate.net/publication/259275014_Topographic_correction_of_satellite_images_Theory_and_application</text>
             <br>
 
         </i></text>
@@ -408,7 +459,7 @@
             leaves strongly absorb wavelengths of visible (red) light. The leaves themselves strongly
             reflect wavelengths of near-infrared light, which is invisible to human eyes.</text><br>
             Link <br>&#128071;<br>
-            <text style="color:blue;">https://www.usgs.gov/special-topics/remote-sensing-phenology/science/vegetation-indices#:~:text=Vegetation%20Indices%20Remote%20sensing%20phenology%20studies%20use%20data,leaves%20strongly%20absorb%20wavelengths%20of%20visible%20%28red%29%20light.</text>
+            <text style="color:#707050;">https://www.usgs.gov/special-topics/remote-sensing-phenology/science/vegetation-indices#:~:text=Vegetation%20Indices%20Remote%20sensing%20phenology%20studies%20use%20data,leaves%20strongly%20absorb%20wavelengths%20of%20visible%20%28red%29%20light.</text>
         <br>
         <br>
             NDVI assists in forecasting fire zones, extracting vegetation health information, and
@@ -419,7 +470,7 @@
             computing the difference between visible and near-infrared reflectance to estimate the
         concentration of greens vegetation in a particular area (Weier & Herring, 2000)</text>.<br>
             Link <br>&#128071;<br>
-            <text style="color:blue;">https://www.sciencedirect.com/topics/earth-and-planetary-sciences/vegetation-index</text>
+            <text style="color:#707050;">https://www.sciencedirect.com/topics/earth-and-planetary-sciences/vegetation-index</text>
         <br>
         <br>
             [...]Remote sensed information of growth, vigor, and their dynamics from terrestrial
@@ -441,7 +492,7 @@
             and red (620–750 nm) wavelength regions; and (iii) the near and mid infrared band
         (850–1700 nm) [11, 12].</text><br>
             Link <br>&#128071;<br>
-            <text style="color:blue;">https://www.hindawi.com/journals/js/2017/1353691/</text>
+            <text style="color:#707050;">https://www.hindawi.com/journals/js/2017/1353691/</text>
             <br>
             <br>
             <text style="color:purple;">Forests are an indispensable foundation of life for humans. They fulfil multiple functions
@@ -465,9 +516,9 @@
             soil-adjusted vegetation index (SAVI) were cited in numerous research papers and they have been
             widely used in the forest researches to investigate the relationship between forest parameters
             such as diameter at breast height (DBH), per cent crown cover, tree age class, tree height, basal
-            area, tree volume and aboveground living biomass.
+            area, tree volume and aboveground living biomass.<br>
             Link <br>&#128071;<br>
-            <text style="color:blue;">https://link.springer.com/chapter/10.1007/978-981-19-4200-6_8</text>
+            <text style="color:#707050;">https://link.springer.com/chapter/10.1007/978-981-19-4200-6_8</text>
             <br>
             <br>
             </i>
