@@ -10,7 +10,9 @@ display:block;
 }
 
 a{
-background-color:#979999;
+background-color: black;
+color: yellow;
+padding:0.05%;
 }
 
 h1{
