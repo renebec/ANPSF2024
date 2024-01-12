@@ -40,7 +40,8 @@ display: inline;
 section{
 font-size:95%;
 border:1px solid black;
-margin-right:5px;
+margin-right:5px auto;
+margin-left:5px auto;
 padding-right: 5px;
 padding-left:5px;
 padding-top:15px;
