@@ -444,7 +444,7 @@ There are several standard algorithms including the C correction model to dimini
         s: banda infra rojo (bs).
         <br>
         <br>
-        La <b style="color:red;">Figura x</b> muestra la forma leptocúrtica de la distribución de
+        La Figura 2 muestra la forma leptocúrtica de la distribución de
         los valores del<b>NDVI</b>, en contraste con la mayor amplitud que se
         observa en los valores del <b>IVV</b>.</b>
         <br>
@@ -459,7 +459,7 @@ There are several standard algorithms including the C correction model to dimini
         <br>
         La notoria diferencia en la distribución de los índices se manifiesta también en
         una mayor facilidad para diferenciar el tipo de coberturas presentes en el territorio
-        observado. En la <b style="color:red">Figura x</b> se muestran 4 firmas espectrales que
+        observado. En la Figura 3 se muestran 4 firmas espectrales que
         corresponden a 4 puntos geográficos en la zona de estudio:
         <br>
         <br>
@@ -472,7 +472,7 @@ There are several standard algorithms including the C correction model to dimini
         Las firmas se construyeron con
         los datos de las bandas 4, 8 y 11 del MSI y, se agrega en la misma gráfica los valores
         del <b>NDVI</b> así como del <b>IVV</b>. Se observa que los valores del <b>NDVI</b> de las
-        firmas 1 y 3 se encuentran más cercanos al valor <b>NDVI</b> de la firma 4. En contraste,
+        firmas 1 y 3 se encuentran más cercanos al valor <b>NDVI</b> de la firma 3. En contraste,
         los valores del <b>IVV</b> permiten discriminar mejor la cobertura de la
         firma 4 (que corresponde a suelo desnudo) del resto de firmas que si presentan vegetación
         arbórea con algún nivel de verdor y humedad.
@@ -482,7 +482,7 @@ There are several standard algorithms including the C correction model to dimini
         <iframe src="https://renebec.github.io/plotLineSpectrumSample3/"
         style="width:70%;height:300px;" title="Spectral Signatures Samples & index values" class="centerxx"></iframe>
         <img src="plotSignaturesSample3.png" width="70%"  alt="signatures & index values" class="centerxx">
-        <i style="color:#557090"> Figura 2. Los valores del <b>IVV</b> permiten diferenciar mejor aquellas
+        <i style="color:#557090"> Figura 3. Los valores del <b>IVV</b> permiten diferenciar mejor aquellas
             coberturas vegetales de las de suelo desnudo y pastizal.</i>
         <br>
         <br>
@@ -536,7 +536,7 @@ There are several standard algorithms including the C correction model to dimini
         el algoritmo recalcula la posición de cada centroide en función de las distancias promedio y
         vuelve a calcular las distancias a los puntos desde la nueva posición de los centroides. Este
         proceso se repite de manera iterativa hasta que las posiciones de los centroides se estabilizan
-        y los puntos dejan de cambiar de centroide como se muestra en la animación de la Figura 2.
+        y los puntos dejan de cambiar de centroide como se muestra en la animación de la Figura 4.
         <br>
 
         <!---<p style="text-align:center;"><iframe src="https://media.licdn.com/dms/image/C5612AQH8kEizAouznA/article-cover_image-shrink_600_2000/0/1626424726069?e=2147483647&v=beta&t=deUL_yPDFPXK8dkspX2oJZWX1qqyx3XBokl02TN8x9k"
@@ -545,7 +545,7 @@ There are several standard algorithms including the C correction model to dimini
         <br>
        <img src="https://res.cloudinary.com/dyd911kmh/image/upload/f_auto,q_auto:best/v1562788530/Visualizing_K-Means_algorithm_1_eefbvf.gif"
             style="width:50%;" class="centerx"></img>
-        <i style="color:#557090;">Fig 2. Representación animada del funcionamiento del algoritmo de
+        <i style="color:#557090;">Fig 4. Representación animada del funcionamiento del algoritmo de
         clasificación k-means</i>.
         <br>
         <br>
@@ -573,12 +573,12 @@ There are several standard algorithms including the C correction model to dimini
         Para determinar el número de clusters o clases, se siguió el método del "codo" en el que
         se calcula la suma de cuadrados con diferentes cantidades de clusters. Se selecciona
         el número de clusters a partir del cual la diferencia en las sumas de cuadrados comienza
-        a ser menos significativa.
+        a ser menos significativa (Figura 5).
         <br>
         <br>
         <br>
         <img src="plot kmeans codo.png" width="100%" alt="codo k means"><br>
-        <i style="color:#557090;">Fig 3. Número óptimo de clases. En la gráfica izquierda podemos observar
+        <i style="color:#557090;">Fig 5. Número óptimo de clases. En la gráfica izquierda podemos observar
             que a partir de tres clusters la diferencia en las sumas de cuadrados se
             estabiliza. En la gráfica derecha podemos ver que la suma de cuadrados alcanza un máximo
             en <b>tres</b> antes de empezar a caer.</i>
@@ -586,11 +586,11 @@ There are several standard algorithms including the C correction model to dimini
         <br>
         <br>
         A partir de las tres clases o categorías obtenidas se calcularon
-        las estadísticas por zona (clase) de los dos índices de vegetación (Tabla 6).
+        las estadísticas por zona (clase) de los dos índices de vegetación (Tabla 4).
         <br>
         <br>
         <br>
-        <i style="color:#557090;">Tabla 6. Estadísticas de los índices de vegetación en cada clase
+        <i style="color:#557090;">Tabla 4. Estadísticas de los índices de vegetación en cada clase
             o categoría obtenida.</i><br>
         <table border=0
            style="background-color:lightgrey;width:100%;"
@@ -614,14 +614,14 @@ There are several standard algorithms including the C correction model to dimini
         <br>
         <br>
 
-        La descripción de las clases obtenidas se muestran en la Tabla 8.
+        La descripción de las clases obtenidas se muestran en la Tabla 5.
         Las tres clases representan distintos tipos de cobertura vegetal en función del <b>vigor vegetal</b>
         relacionado con el verdor y con eel contenido de humedad en la planta, aspectos que se expresan a
         través de la relaciones entre las bandas 4, 8 y 11.
         <br>
         <br>
         <br>
-        <i style="color:#557090;">Tabla 8. Descripción de las clases obtenidas por medio de la clasificación
+        <i style="color:#557090;">Tabla 5. Descripción de las clases obtenidas por medio de la clasificación
             k-means.</i><br>
         <table border=0
            style="background-color:lightgrey;width:100%;"
@@ -642,13 +642,13 @@ There are several standard algorithms including the C correction model to dimini
             en los resultados de la clasificación a partir del <b>NDVI</b> y del
             <b>IVV</b>. En la clasificación <b>NDVI</b> hay un mayor conteo de
             pixeles en la categoría de <b>Pastizal</b> y un menor conteo en la
-            categoría de <b>Bosque vigor 2</b>. Lo anterior podemos observarlo con mucha
-            claridad en la Figura 3.
+            categoría de <b>Bosque vigor 2</b>. Lo anterior podemos observarlo con
+            claridad en la Figura 6.
             <br>
             <br>
         <br>
         <img src="kmvs.png" width="100%" alt="" width="300" id="kmvs"><br>
-            <caption><i style="color:#557090;">Fig 3. Clasificación obtenida a partir del índice <b>NDVI</b>
+            <caption><i style="color:#557090;">Fig 6. Clasificación obtenida a partir del índice <b>NDVI</b>
                 (izquierda); clasificación a partir del <b>IVV</b> (derecha);
                 El color rojo representa cobertura de <b>Pastizal</b>,
             el color café es <b>Bosque vigor 1</b> y el color verde corresponde
@@ -731,7 +731,7 @@ There are several standard algorithms including the C correction model to dimini
         <br>
         <br>
         <br>
-        <i style="color:#557090;">Tabla 10. Resultados del modelo de regresión logística.
+        <i style="color:#557090;">Tabla 6. Resultados del modelo de regresión logística.
             <br>
             <br>
         Coeficientes.</i><br>
@@ -782,7 +782,7 @@ There are several standard algorithms including the C correction model to dimini
         <br>
         <br>
         <br>
-        En la Figura 4 se puede observar que la probabilidad de ocurrencia del <b>bosque v1 y v2</b>
+        En la Figura 7 se puede observar que la probabilidad de ocurrencia del <b>bosque v1 y v2</b>
         se ve influenciada por el aumento en los valores de la pendiente y es ligeramente superior en orientación
         Norte. La vegetación de <b>bosque s</b> presenta probabilidades de ocurrencia
         constantes en un rango amplio de valores de pendiente y ligeramente superior para aquellas
@@ -793,7 +793,7 @@ There are several standard algorithms including the C correction model to dimini
         <br>
         <br>
         <img src="plot_prob_ivv2.png" width="100%" alt="gráfica de probabilidades"><br>
-        <i style="color:#557090;">Fig 4. Probabilidades de ocurrencia de las diferentes clases de vegetación
+        <i style="color:#557090;">Fig 7. Probabilidades de ocurrencia de las diferentes clases de vegetación
             para diferentes valores de la pendiente y en las diferentes orientaciones del terreno.</i>.
         <br>
         <br>
@@ -804,7 +804,7 @@ There are several standard algorithms including the C correction model to dimini
         Se desarrolló un modelo de regresión múltiple donde la variable respuesta es continua
         a partir de la información del índice de vigor vegetal (ivv). Del mismo modo se usaron dos
         variables predictivas continuas: pendiente (slope) y aspecto del terreno.
-        En la Figura 5 se muestra la superficie de respuesta para el modelo
+        En la Figura 8 se muestra la superficie de respuesta para el modelo
         de regresión lineal múltiple:
             <br>
             <br>
@@ -818,7 +818,7 @@ There are several standard algorithms including the C correction model to dimini
         <br>
         <br>
         <br>
-        <i style="color:#557090;">Tabla 11. Resultados del modelo de regresión lineal.</i>
+        <i style="color:#557090;">Tabla 7. Resultados del modelo de regresión lineal.</i>
             <br>
             <br>
 
@@ -859,7 +859,7 @@ There are several standard algorithms including the C correction model to dimini
         <br>
         <iframe src="https://renebec.github.io/linearMult3D/"
         style="width:100%;height:500px;" title="3D surface response"></iframe>
-        <i style="color:#557090;">Fig 5. Gráfica interactiva. Superficie de respuesta de la
+        <i style="color:#557090;">Fig 8. Gráfica interactiva. Superficie de respuesta de la
         regresión lineal múltiple. El eje x representa los valores de la pendiente;
             el eje y representa los valores de aspecto donde 0 indica la
             orientación Norte y 180 la orientación Sur.</i>
