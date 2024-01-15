@@ -110,6 +110,23 @@ function myFunction6() {
   }
 }
 
+
+function myFunction6b() {
+  var dots6b = document.getElementById("dots6b");
+  var moreText6b = document.getElementById("more6b");
+  var btnText6b = document.getElementById("myBtn6b");
+
+  if (dots6b.style.display === "none") {
+    dots6b.style.display = "inline";
+    btnText6b.innerHTML = "Leer más";
+    moreText6b.style.display = "none";
+  } else {
+    dots6b.style.display = "none";
+    btnText6b.innerHTML = "Mostrar menos";
+    moreText6b.style.display = "inline";
+  }
+}
+
 function myFunction7() {
   var dots7 = document.getElementById("dots7");
   var moreText7 = document.getElementById("more7");
