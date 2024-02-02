@@ -401,7 +401,7 @@
         <br>
         <br>
         <br>
-        <img src="view compare1.png" width="100%" alt="Corrección de iluminación por factor C"><br>
+        <img class="zoom1"  src="view compare1.png" width="70%" alt="Corrección de iluminación por factor C"><br>
         <i style="color:#557090">Figura 1. Composición de imagen multibanda RGB (11, 8, 3) de la escena
             Sentinel-2. (A) Imagen sin corrección de iluminación topográfica;
             (B) Imagen con iluminación topográfica corregida.</i>
@@ -413,6 +413,7 @@
         <br>
         <text style="color:#707050"><i>
             Fuentes:<br>
+            https://www.researchgate.net/publication/342323432_PLC-C_An_Integrated_Method_for_Sentinel-2_Topographic_and_Angular_Normalization<br>
             https://www.sciencedirect.com/science/article/abs/pii/S0303243411000584#preview-section-snippets<br>
             https://www.researchgate.net/publication/259275014_Topographic_correction_of_satellite_images_Theory_and_application<br>
             https://www.sciencedirect.com/science/article/abs/pii/S0303243411000584<br>
@@ -488,13 +489,11 @@
 
         <br>
         <br>
-        Con los datos de la banda <b>4</b> (0.6646 &micro;) y <b>8</b> (0.8328 &micro;) se generó el índice
-        de Vegetación de Diferencias Normalizado (<b>NDVI</b>) y además se generó un Índice de Vigor Vegetal
-        (<b>IVV</b>) que <span id="dots5">...</span><span id="more5">expresa la presencia de vegetación en función de las bandas <b>4</b>, <b>8</b> y
-        <b>11</b> (1.6137 &micro;), considerando en este caso la humedad presente en las coberturas. El uso
-        de índices es una manera de reducir la cantidad de información multiespectral a través de las
-        relaciones que hay en el comportamiento de la reflectancia dada por diferentes coberturas. Para la
-                creación de los índices se utilizaron las siguientes expresiones:
+        Con los datos de la banda <b>4</b> (0.6646 &micro;), <b>8</b> (0.8328 &micro;) y <b>11</b> (1.6137 &micro;)
+        se generaron dos índices de vegetación: a) el índice de Vegetación de Diferencias Normalizado (<b>NDVI</b>) y
+        b) un Índice de Vigor Vegetal (<b>IVV</b>) que <span id="dots5">...</span><span id="more5">exprese
+        la presencia de vegetación vigorosa en función de su verdor y de su contenido de agua simultáneamente.
+        Los índices se construyeron utilizando las siguientes expresiones:
         <br>
         <br>
         &emsp;<b>NDVI</b> = <i style="color:brown;font-weight:bold;">(n - r)</i> &divide; <i style="color:blue;font-weight:bold;">(n + r)</i>
@@ -547,8 +546,8 @@
         <br>
         <br>
         <iframe src="https://renebec.github.io/plotLineSpectrumSample3/"
-        class="centerxx" width="100%" height="350px" title="Spectral Signatures Samples & index values" ></iframe>
-        <img src="plotSignaturesSample3.png" width="100%"  alt="signatures & index values" >
+        class="centerxx" width="100%" height="300px" title="Spectral Signatures Samples & index values" ></iframe>
+        <img class="zoom2" src="plotSignaturesSample3.png" width="100%"  alt="signatures & index values" >
         <i style="color:#557090"> Figura 3. Los valores del <b>IVV</b> permiten diferenciar mejor aquellas
             coberturas vegetales de las de suelo desnudo y pastizal.</i>
         <br>
@@ -559,6 +558,9 @@
         <br>
         <text style="color:#707050"><i>
         Fuentes:<br>
+        https://www.mdpi.com/2072-4292/13/18/3550<br>
+        https://www.bing.com/search?q=r+image%2C+sentinel+DOS+correction+atmospheric&qs=n&form=QBRE&sp=-1&lq=0&pq=r+image%2C+sentinel+dos+correction+atmospheric&sc=1-44&sk=&cvid=32410D588CFF48A4B8B0F6D8607F0AD1&ghsh=0&ghacc=0&ghpl=<br>
+        https://www.researchgate.net/publication/327558326_Apuntes_de_Teledeteccion_Indices_de_vegetacion<br>
         https://geoinnova.org/blog-territorio/analisis-de-indices-de-vegetacion-en-teledeteccion/#Indice_GLI_Green_Leaf_Index<br>
         https://www.auravant.com/blog/agricultura-de-precision/indices-de-vegetacion-y-como-interpretarlos/<br>
         https://mappinggis.com/2020/07/los-6-indices-de-vegetacion-para-completar-el-ndvi/#SIPI_Indice_de_Pigmentacion_Insensible_a_la_Estructura<br>
@@ -567,6 +569,7 @@
         https://www.hindawi.com/journals/js/2017/1353691/<br>
         https://www.sciencedirect.com/topics/earth-and-planetary-sciences/vegetation-index<br>
         https://www.hindawi.com/journals/js/2017/1353691/<br>
+        https://books.google.cl/books?id=Yb6xIldfoT0C&pg=PA105&lpg=PA105&dq=indices+de+vegetacion&source=bl&ots=oQCBrrEFZn&sig=NKgMPm82MtfImqfUDZU_HxGW9fw&hl=es&sa=X&ei=4wo-fvyJqiE2QXrnYH4DQ&ved=0CDYQ6AEwAQ#v=onepage&q=indices%20de%20vegetacion&f=false<br>
 
             <br>
             <br>
@@ -655,37 +658,9 @@
         <br>
         <br>
         <br>
-        A partir de las tres clases o categorías obtenidas se calcularon
-        las estadísticas por zona (clase) de los dos índices de vegetación (Tabla 4).
-        <br>
-        <br>
-        <br>
-        <i style="color:#557090;">Tabla 4. Estadísticas de los índices de vegetación en cada clase
-            o categoría obtenida.</i><br>
-        <table border=0
-           style="background-color:lightgrey;width:100%;"
-           class="table1">
-
-                    <thead style="background-color:#66C802;color:white">
-
-                        <tr style="background:green3;"><th class="word"> Clase</th> <th class="meaning" colspan="2">NDVI<br>media-desv</th><th class="meaning" colspan="2">IVV<br>media-desv</th></tr></thead>
-                        <tr style="text-align:left;color:black;"><td align="center">Clase 1</td><td align="center">0.1267</td><td align="center">0.0164</td><td align="center">0.3657</td><td align="center">0.0447</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">Clase 2</td><td align="center">0.1672</td><td align="center">0.0136</td><td align="center">0.4827</td><td align="center">0.0300</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">Clase 3</td><td align="center">0.2289</td><td align="center">0.0285</td><td align="center">0.5839</td><td align="center">0.0350</td></tr>
-        </table>
-        <br>
-        <br>
-        <br>
-        Se observa una mayor amplitud en los valores del IVV con respecto al NDVI, así como también una
-            mayor varianza como resultado de introducir la información de la banda 11 y por la
-            relación que tiene la presencia de humedad con la información de la banda 4 y 8.
-
-        <br>
-        <br>
-
         La descripción de las clases obtenidas se muestran en la Tabla 5.
-        Las tres clases representan distintos tipos de cobertura vegetal en función del <b>vigor vegetal</b>
-        relacionado con el verdor y con eel contenido de humedad en la planta, aspectos que se expresan a
+        Las cinco clases representan distintos tipos de cobertura vegetal en función del <b>vigor vegetal</b>
+        relacionado con el verdor y con el contenido de humedad en la planta, aspectos que se expresan a
         través de la relaciones entre las bandas 4, 8 y 11.
         <br>
         <br>
@@ -699,14 +674,46 @@
                     <thead style="background-color:#66C802;color:white">
 
                         <tr style="background:green3;"><th class="word"> Clase</th> <th class="meaning" colspan="2">Conteo<br>NDVI - IVV</th><th class="meaning">Descripción</th></tr></thead>
-                        <tr style="text-align:left;color:black;"><td align="center">1</td><td align="center">467,748</td><td align="center">237,890</td><td align="center">Pastizal</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">2</td><td align="center">539,231</td><td align="center">520,966</td><td align="center">Bosque vigor 1</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">3</td><td align="center">144,069</td><td align="center">392,192</td><td align="center">Bosque vigor 2</td></tr>
-
+                        <tr style="text-align:left;color:black;"><td align="center">PTZ</td><td align="center">190,071</td><td align="center">131,281</td><td align="center">Pastizal</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">PTZ-MAT</td><td align="center">401,025</td><td align="center">281,435</td><td align="center">Paztizal-matorral</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">MAT</td><td align="center">349,583</td><td align="center">337,393</td><td align="center">Matorral</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">BQE</td><td align="center">159,918</td><td align="center">264,003</td><td align="center">Bosque</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">BQH</td><td align="center">50,451</td><td align="center">136,936</td><td align="center">Bosque húmedo</td></tr>
         </table>
         <br>
         <br>
         <br>
+        A partir de las cinco clases o categorías obtenidas se calcularon
+        las estadísticas por zona (clase) de los dos índices de vegetación (Tabla 4).
+        <br>
+        <br>
+        <br>
+        <i style="color:#557090;">Tabla 4. Estadísticas de los índices de vegetación en cada clase
+            o categoría obtenida.</i><br>
+        <table border=0
+           style="background-color:lightgrey;width:100%;"
+           class="table1">
+
+                    <thead style="background-color:#66C802;color:white">
+
+                        <tr style="background:green3;"><th class="word"> Clase</th> <th class="meaning" colspan="2">NDVI<br>media-desv</th><th class="meaning" colspan="2">IVV<br>media-desv</th></tr></thead>
+                        <tr style="text-align:left;color:black;"><td align="center">PTZ</td><td align="center">0.1113</td><td align="center">0.0144</td><td align="center">0.3212</td><td align="center">0.0286</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">PTZ-MAT</td><td align="center">0.1415</td><td align="center">0.0080</td><td align="center">0.3959</td><td align="center">0.0184</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">MAT</td><td align="center">0.1683</td><td align="center">0.0086</td><td align="center">0.4531</td><td align="center">0.0166</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">BQE</td><td align="center">0.2036</td><td align="center">0.0126</td><td align="center">0.5128</td><td align="center">0.0185</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">BQH</td><td align="center">0.2600</td><td align="center">0.0259</td><td align="center">0.5830</td><td align="center">0.0298</td></tr>
+        </table>
+        <br>
+        <br>
+        <br>
+        Se observa una mayor amplitud en los valores del IVV con respecto al NDVI, así como también una
+            mayor varianza como resultado de introducir la información de la banda 11 y por la
+            relación que tiene la presencia de humedad con la información de la banda 4 y 8.
+
+        <br>
+        <br>
+
+
          Notamos que el conteo de pixeles identificados en cada clase difiere notablemente
             en los resultados de la clasificación a partir del <b>NDVI</b> y del
             <b>IVV</b>. En la clasificación <b>NDVI</b> hay un mayor conteo de
@@ -716,26 +723,21 @@
             <br>
             <br>
         <br>
-        <img src="kmvs.png" width="100%" alt="" width="300" id="kmvs"><br>
+        <img class="zoom" src="kmvs.png" width="100%" alt="" width="300" id="kmvs"><br>
             <caption><i style="color:#557090;">Fig 6. Clasificación obtenida a partir del índice <b>NDVI</b>
                 (izquierda); clasificación a partir del <b>IVV</b> (derecha);
-                El color rojo representa cobertura de <b>Pastizal</b>,
-            el color café es <b>Bosque vigor 1</b> y el color verde corresponde
-            al <b>Bosque vigor 2</b>. Al centro se muestra la composición multibanda en RGB (11,8,3)
+                Al centro se muestra la composición multibanda en RGB (11,8,3)
                 de la imagen satelital Sentinel-2.</i></caption>
         <br>
         <br>
-        <br>
             En un primer análisis visual fotointerpretativo, los resultados de
-            la clasificación hecha sobre el <b>IVV</b> parecen ser más afines
-            a las características reales de las coberturas vegetales presentes en la
-            zona de estudio. La clasificación <b>NDVI</b> detecta una mayor
-            cantidad de pixeles dentro de la clase 1 asociada a <b>Pastizal</b>, mientras
-            que clasifica muy pocas zonas como <b>Bosque vigor 2</b>. En contraste,
-            la clasificación <b>IVV</b> logra diferenciar con mayor definición y
-            consistencia aquellas zonas con mínima o nula vegetación, <b>Pastizal</b>, de aquellas
-            otras zonas de matorral y bosque senescente disperso que para fines del
-            presente estudio hemos denominado <b>Bosque vigor 1</b>.
+            la clasificación hecha sobre el <b>IVV</b> parecen describir mejor
+            las coberturas vegetales presentes en la zona de estudio. La clasificación
+            <b>NDVI</b> detecta una mayor
+            cantidad de pixeles dentro de las categorías de menor vigor, mientras
+            que clasifica muy pocas zonas como <b>Bosque húmedo</b>. En contraste,
+            la clasificación <b>IVV</b> clasifica una mayor cantidad de pixeles en las
+            categorías de vegetación con mayor vigor.
             <br>
             <br>
             <br>
@@ -871,26 +873,27 @@
 
                     <thead style="background-color:#66C802;color:white">
 
-                        <tr style="background:green3;"><th class="word"> Clase</th> <th class="meaning">Intercept</th><th class="meaning">N</th><th class="meaning">S</th><th class="meaning">W</th><th class="meaning">Slope</th></tr></thead>
-                        <tr style="text-align:left;color:black;"><td align="center">Bosque v1</td><td align="center">-1.9812</td><td align="center">0.1101</td><td align="center">-0.1252</td><td align="center">-0.2386</td><td align="center">0.0517</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">Bosque v2</td><td align="center">-2.4915</td><td align="center">0.5230</td><td align="center">-0.1807</td><td align="center">-0.2987</td><td align="center">0.0607</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">Pastizal</td><td align="center">-0.8034</td><td align="center">-0.2844</td><td align="center">0.1936</td><td align="center">-0.4949</td><td align="center">-0.1193</td></tr>
-
+                        <tr style="background:green3;"><th class="word"> Clase</th> <th class="meaning">Intercept</th><th class="meaning">Slope</th><th class="meaning">N</th><th class="meaning">P</th><th class="meaning">S</th><th class="meaning">W</th></tr></thead>
+                        <tr style="text-align:left;color:black;"><td align="center">BQE</td><td align="center">-0.5790</td><td align="center">0.0172</td><td align="center">-0.0684</td><td align="center">0.1079</td><td align="center">-0.1051</td><td align="center">-0.3715</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">BQH</td><td align="center">-1.3437</td><td align="center">0.0233</td><td align="center">0.0463</td><td align="center">0.2659</td><td align="center">-0.1960</td><td align="center">-0.8648</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">MAT</td><td align="center">0.1232</td><td align="center">-0.0195</td><td align="center">0.0501</td><td align="center">0.0687</td><td align="center">0.1248</td><td align="center">0.2778</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">PTZ</td><td align="center">0.0192</td><td align="center">-0.0551</td><td align="center">-0.1484</td><td align="center">-0.0025</td><td align="center">0.1834</td><td align="center">-0.2373</td></tr>
 
         </table>
         <i style="color:#557090;">Error estándar</i><br>
         <table border=0
            style="background-color:lightgrey;width:100%;"
            class="table1">
-            <caption style="color:#557090;">Desviación residual: 2,303,168<br>
-            AIC: 2,303,198</caption>
+            <caption style="color:#557090;">Desviación residual: 1,547,112<br>
+            AIC: 1,547,160</caption>
 
                     <thead style="background-color:#66C802;color:white">
 
-                        <tr style="background:green3;"><th class="word"> Clase</th> <th class="meaning">Intercept</th><th class="meaning">N</th><th class="meaning">S</th><th class="meaning">W</th><th class="meaning">Slope</th></tr></thead>
-                        <tr style="text-align:left;color:black;"><td align="center">Bosque v1</td><td align="center">0.0060</td><td align="center">0.0074</td><td align="center">0.0069</td><td align="center">0.0076</td><td align="center">0.0002</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">Bosque v2</td><td align="center">0.0071</td><td align="center">0.0079</td><td align="center">0.0082</td><td align="center">0.0090</td><td align="center">0.0003</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">Pastizal</td><td align="center">0.0072</td><td align="center">0.0104</td><td align="center">0.0080</td><td align="center">0.0109</td><td align="center">0.0006</td></tr>
+                        <tr style="background:green3;"><th class="word"> Clase</th> <th class="meaning">Intercept</th><th class="meaning">Slope</th><th class="meaning">N</th><th class="meaning">P</th><th class="meaning">S</th><th class="meaning">W</th></tr></thead>
+                        <tr style="text-align:left;color:black;"><td align="center">BQE</td><td align="center">0.0082</td><td align="center">0.0002</td><td align="center">0.0116</td><td align="center">0.0291</td><td align="center">0.0100</td><td align="center">0.0112</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">BQH</td><td align="center">0.0102</td><td align="center">0.0002</td><td align="center">0.0136</td><td align="center">0.0349</td><td align="center">0.0123</td><td align="center">0.0154</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">MAT</td><td align="center">0.0080</td><td align="center">0.0002</td><td align="center">0.0119</td><td align="center">0.0259</td><td align="center">0.0098</td><td align="center">0.0106</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">PTZ</td><td align="center">0.0102</td><td align="center">0.0004</td><td align="center">0.0159</td><td align="center">0.0284</td><td align="center">0.0120</td><td align="center">0.0151</td></tr>
 
 
         </table>
@@ -902,27 +905,28 @@
 
                     <thead style="background-color:#66C802;color:white">
 
-                        <tr style="background:green3;"><th class="word"> Clase</th> <th class="meaning">Intercept</th><th class="meaning">N</th><th class="meaning">S</th><th class="meaning">W</th><th class="meaning">Slope</th></tr></thead>
-                        <tr style="text-align:left;color:black;"><td align="center">Bosque v1</td><td align="center">0.1378</td><td align="center">1.1164</td><td align="center">0.8822</td><td align="center">0.7876</td><td align="center">1.0530</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">Bosque v2</td><td align="center">0.0827</td><td align="center">1.6872</td><td align="center">0.8346</td><td align="center">0.7417</td><td align="center">1.0625</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">Pastizal</td><td align="center">0.4477</td><td align="center">0.7524</td><td align="center">1.2136</td><td align="center">0.6095</td><td align="center">0.8875</td></tr>
+                        <tr style="background:green3;"><th class="word"> Clase</th> <th class="meaning">Intercept</th><th class="meaning">Slope</th><th class="meaning">N</th><th class="meaning">P</th><th class="meaning">S</th><th class="meaning">W</th></tr></thead>
+                        <tr style="text-align:left;color:black;"><td align="center">BQE</td><td align="center">0.5604</td><td align="center">1.0173</td><td align="center">0.9338</td><td align="center">1.1140</td><td align="center">0.9001</td><td align="center">0.6896</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">BQH</td><td align="center">0.2608</td><td align="center">1.0236</td><td align="center">1.0474</td><td align="center">1.3047</td><td align="center">0.8220</td><td align="center">0.4211</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">MAT</td><td align="center">1.1311</td><td align="center">0.9806</td><td align="center">1.0514</td><td align="center">1.0711</td><td align="center">1.1330</td><td align="center">1.3202</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">PTZ</td><td align="center">1.0194</td><td align="center">0.9463</td><td align="center">0.8620</td><td align="center">0.9974</td><td align="center">1.2013</td><td align="center">0.7887</td></tr>
 
 
         </table>
         <br>
         <br>
         <br>
-        En la Figura 7 se puede observar que la probabilidad de ocurrencia del <b>bosque v1 y v2</b>
+        En la Figura 7 se puede observar que la probabilidad de ocurrencia del <b>BQE</b> y del <b>BQH</b>
         se ve influenciada por el aumento en los valores de la pendiente y es ligeramente superior en orientación
-        Norte. La vegetación de <b>bosque s</b> presenta probabilidades de ocurrencia
+        Norte. La vegetación de <b>PTZ-MAT</b> presenta probabilidades de ocurrencia
         constantes en un rango amplio de valores de pendiente y ligeramente superior para aquellas
-        superficies de terreno con orientación Oeste. En el caso del <b>pastizal</b>
+        superficies de terreno con orientación Oeste. En el caso del <b>MAT</b> y <b>PTZ</b>
         se observa un máximo en el valor de las
         probabilidades de ocurrecnia cuando los valores de la pendiente son mínimos.
         <br>
         <br>
         <br>
-        <img src="plot_prob_ivv2.png" width="100%" alt="gráfica de probabilidades"><br>
+        <img class = "zoom3" src="plot_prob_logit.png" width="100%" alt="gráfica de probabilidades"><br>
         <i style="color:#557090;">Fig 7. Probabilidades de ocurrencia de las diferentes clases de vegetación
             para diferentes valores de la pendiente y en las diferentes orientaciones del terreno.</i>.
         <br>
@@ -953,7 +957,7 @@
             <br>
 
         <i style="color:#557090;">Coeficientes:</i>
-        <!--comentario --!>
+        <!--comentario -->
         <table border=0
            style="background-color:lightgrey;width:100%;"
            class="table1">

@@ -80,6 +80,63 @@ table, th, td {
 
 }
 
+img.custom:hover,
+img.custom:focus {
+  width: 750px;
+  height: 350px;
+}
+
+.zoom {
+  padding: 0px;
+  background-color: black;
+  transition: transform .5s; /* Animation */
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+}
+
+.zoom:hover {
+  transform: scale(1.65); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.zoom1 {
+  padding-left:15%;
+  padding-right:15%;
+  background-color: #222222;
+  transition: transform .5s; /* Animation */
+  width: 70%;
+  margin: auto;
+}
+
+.zoom1:hover {
+  transform: scale(1.6); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.zoom2 {
+  padding-left:35%;
+  padding-right:35%;
+  background-color: #222222;
+  transition: transform .5s; /* Animation */
+  width: 30%;
+  margin: auto;
+}
+
+.zoom2:hover {
+  transform: scale(2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+.zoom3 {
+  padding-left:0%;
+  padding-right:0%;
+  background-color: #222222;
+  transition: transform .5s; /* Animation */
+  width: 100%;
+  margin: auto;
+}
+
+.zoom3:hover {
+  transform: scale(1.7); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
 
 
 .table1, th, td {
@@ -105,7 +162,7 @@ width:50%;
 display:block;
 margin-left:auto;
 margin-right:auto;
-width:100%
+width:100%;
 
 }
 
