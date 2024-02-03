@@ -1,3 +1,8 @@
+var siteWidth = 1280;
+var scale = screen.width /siteWidth;
+
+document.querySelector('meta[name="viewport"]').setAttribute('content', 'width='+siteWidth+', initial-scale='+scale+'');
+
 function myFunction0() {
   var dots0 = document.getElementById("dots0");
   var moreText0 = document.getElementById("more0");
