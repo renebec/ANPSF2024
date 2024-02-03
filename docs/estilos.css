@@ -19,8 +19,8 @@
 body {
 font-family: montserrat, century gothic;
 background:#252626;
-width:900px;
-margin:auto;
+width:auto;
+margin:1% 2.5%;
 }
 
 header,section,footer,nav{
