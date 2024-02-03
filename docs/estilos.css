@@ -17,10 +17,10 @@
 }
 
 body {
-font-family:century gothic;
+font-family: montserrat, century gothic;
 background:#252626;
-width:auto;
-margin:1% 2.5%;
+width:900px;
+margin:auto;
 }
 
 header,section,footer,nav{
