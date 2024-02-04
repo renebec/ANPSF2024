@@ -39,10 +39,10 @@ width:auto;
 
 @font-face {
    font-family: dosis1Font;
-   src: URL('/docs/Sweet Pineapple/webfont/sweetpineapple-webfont.woff'),format('woff'),
-   URL('/docs/Sweet Pineapple/webfont/sweetpineapple-webfont.ttf'),format('truetype'),
-   URL('/docs/Sweet Pineapple/webfont/sweetpineapple-webfont.otf'),format('opentype'),
-   URL('/docs/Sweet Pineapple/webfont/sweetpineapple-webfont.eot'),format('embedded-opentype');
+   src: URL('../Sweet Pineapple/webfont/sweetpineapple-webfont.woff'),format('woff'),
+   URL('../Sweet Pineapple/webfont/sweetpineapple-webfont.ttf'),format('truetype'),
+   URL('/Sweet Pineapple/webfont/sweetpineapple-webfont.otf'),format('opentype'),
+   URL('/Sweet Pineapple/webfont/sweetpineapple-webfont.eot'),format('embedded-opentype');
 }
 
 .specialFont {
