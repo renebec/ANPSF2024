@@ -29,7 +29,7 @@ width:700px;
 
   .rotul {
 font-family:sweetPine;
-font-size:450%;
+font-size:250%;
 color:#FF7750;
 text-align: center;
 width:auto;
@@ -51,7 +51,7 @@ width:auto;
 }
 
 @font-face {
-   font-family: dosis2Font;
+   font-family: viroFont;
    src: URL('viro-webfont.ttf'), format('truetype'),
    URL('viro-webfont.otf'), format('opentype'),
    URL('viro-webfont.woff'), format('woff'),
@@ -59,13 +59,13 @@ width:auto;
 }
 
 .specialFont2 {
-     font-family: dosis2Font, ultra, script, montserrat, century gothic , sans-serif;
+     font-family: viroFont, ultra, script, montserrat, century gothic , sans-serif;
 }
 
 
 
 body {
-font-family:  dosis2Font, script, montserrat, century gothic , sans-serif;
+font-family:  viroFont, script, montserrat, century gothic , sans-serif;
 background:#252626;
 
 }
@@ -85,7 +85,7 @@ padding:0.05%;
 }
 
 h1{
-font-family: dosis2Font, cambria;sans-serif;
+font-family: viroFont, cambria;sans-serif;
 background:#303030;
 padding:2% 2%;
 color:#958045;
@@ -96,7 +96,7 @@ font-size:95%;
 padding-left:5%;
 padding-top:0%;
 color:white;
-font-family: dosis2Font, ultra, script, montserrat, century gothic , sans-serif;
+font-family: viroFont, ultra, script, montserrat, century gothic , sans-serif;
 
 }
 
