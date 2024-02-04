@@ -10,7 +10,15 @@ font-size:450%;
 color:#FF7750;
 text-align: center;
 width:700px;
-}
+    }
+    .autor{
+font-size:18px;
+padding-left:5%;
+padding-top:0%;
+color:white;
+font-family: viroFont, script, montserrat, century gothic , sans-serif;
+
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -33,7 +41,15 @@ font-size:250%;
 color:#FF7750;
 text-align: center;
 width:auto;
-}
+    }
+    .autor{
+font-size:15px;
+padding-left:5%;
+padding-top:0%;
+color:white;
+font-family: viroFont, script, montserrat, century gothic , sans-serif;
+
+    }
 
 }
 
@@ -91,14 +107,7 @@ padding:2% 2%;
 color:#958045;
 }
 
-.autor{
-font-size:95%;
-padding-left:5%;
-padding-top:0%;
-color:white;
-font-family: viroFont, ultra, script, montserrat, century gothic , sans-serif;
 
-}
 
 .menu li{
 margin:1px auto;
