@@ -5,7 +5,7 @@
     margin:auto;
   }
     .rotul {
-font-family:dosis1Font;
+font-family:sweetPine;
 font-size:450%;
 color:#FF7750;
 text-align: center;
@@ -28,7 +28,7 @@ width:700px;
   }
 
   .rotul {
-font-family:dosis1Font;
+font-family:sweetPine;
 font-size:450%;
 color:#FF7750;
 text-align: center;
@@ -62,13 +62,7 @@ width:auto;
      font-family: dosis2Font, ultra, script, montserrat, century gothic , sans-serif;
 }
 
-.rotul {
-font-family:sweetPine;
-font-size:450%;
-color:#FF7750;
-text-align: center;
-width:700px;
-}
+
 
 body {
 font-family:  dosis2Font, script, montserrat, century gothic , sans-serif;
