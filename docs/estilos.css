@@ -22,10 +22,41 @@
 
 }
 
+@font-face {
+   font-family: dosis1Font;
+   src: URL('/docs/Sweet Pineapple/webfont/sweetpineapple-webfont.woff'),format('woff'),
+   URL('/docs/Sweet Pineapple/webfont/sweetpineapple-webfont.ttf'),format('truetype'),
+   URL('/docs/Sweet Pineapple/webfont/sweetpineapple-webfont.otf'),format('opentype'),
+   URL('/docs/Sweet Pineapple/webfont/sweetpineapple-webfont.eot'),format('embedded-opentype');
+}
 
+.specialFont {
+     font-family: dosis1Font, ultra, script, montserrat, century gothic , sans-serif;
+}
+
+@font-face {
+   font-family: dosis2Font;
+   src: URL('/docs/Viro/webfont/viro-webfont.ttf'), format('truetype'),
+   URL('/docs/Viro/webfont/viro-webfont.otf'), format('opentype'),
+   URL('/docs/Viro/webfont/viro-webfont.woff'), format('woff'),
+   URL('/docs/Viro/webfont/viro-webfont.eot'), format('embedded-opentype');
+}
+
+.specialFont2 {
+     font-family: dosis2Font, ultra, script, montserrat, century gothic , sans-serif;
+}
+
+.rotul {
+font-family:dosis1Font;
+font-size:500%;
+color:#FF7750;
+position: absolute;
+text-align: center;
+width:900px;
+}
 
 body {
-font-family: ultra, sans serif, script, montserrat, century gothic;
+font-family:  dosis2Font, script, montserrat, century gothic , sans-serif;
 background:#252626;
 
 }
@@ -45,17 +76,18 @@ padding:0.05%;
 }
 
 h1{
-font-family:cambria;serif;
+font-family: dosis2Font, cambria;sans-serif;
 background:#303030;
 padding:2% 2%;
 color:#958045;
 }
 
 .autor{
-font-size:85%;
+font-size:95%;
 padding-left:5%;
 padding-top:0%;
 color:white;
+font-family: dosis2Font, ultra, script, montserrat, century gothic , sans-serif;
 
 }
 
