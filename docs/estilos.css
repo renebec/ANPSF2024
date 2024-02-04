@@ -19,6 +19,15 @@ color:white;
 font-family: viroFont, script, montserrat, century gothic , sans-serif;
 
     }
+    .video1{
+    width:100%;
+    height:450px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+
+
+    }
 }
 
 @media screen and (max-width: 600px) {
@@ -48,6 +57,15 @@ padding-left:5%;
 padding-top:0%;
 color:white;
 font-family: viroFont, script, montserrat, century gothic , sans-serif;
+
+    }
+    .video1{
+    width:100%;
+    height:240px;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+
 
     }
 
