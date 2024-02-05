@@ -96,7 +96,7 @@ font-family: viroFont, script, montserrat, century gothic , sans-serif;
     }
 
     .zoom {
-  padding-left: 7px;
+  padding-left: 2px;
   background-color: #BBBDBD;
   transition: transform .5s; /* Animation */
   height:600px
