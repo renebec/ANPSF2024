@@ -244,7 +244,7 @@ img.custom:focus {
 }
 
 .zoom2:hover {
-  transform: scale(2.25); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transform: scale(3.4); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
 }
 
 .zoom3 {
