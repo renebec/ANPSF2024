@@ -42,6 +42,7 @@ font-family: viroFont, script, montserrat, century gothic , sans-serif;
   transition: transform .5s; /* Animation */
   height:600px
   margin: 0 auto;
+
 }
 
 .zoom:hover {
@@ -51,11 +52,15 @@ font-family: viroFont, script, montserrat, century gothic , sans-serif;
 
     .gif{
     width:100%;
-    align:center;
-    height:540px;
+    height:640px;
     display:block;
-    margin-left:auto;
-    margin-right:auto;
+    margin-left:0.5px;
+    margin-right:0.5px;
+    scale:0.95;
+    }
+
+    .gif:hover{
+    transform: scale(1.15);
     }
 }
 
@@ -103,7 +108,11 @@ font-family: viroFont, script, montserrat, century gothic , sans-serif;
     align:right;
     margin-left:0px;
     margin-right:0px;
-    scale:90%;
+    scale:0.99;
+    }
+
+    .gif:hover{
+    transform: scale(1.125);
     }
 
     #kmvs {
