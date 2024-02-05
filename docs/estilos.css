@@ -182,7 +182,7 @@ img.custom:focus {
 }
 
 .zoom {
-  padding-left: 30px;
+  padding-left: 10px;
   background-color: #BBBDBD;
   transition: transform .5s; /* Animation */
   width: 30%;
