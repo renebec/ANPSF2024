@@ -96,7 +96,7 @@ font-family: viroFont, script, montserrat, century gothic , sans-serif;
     }
 
     .zoom {
-  padding-left: 17px;
+  padding-left: 7px;
   background-color: #BBBDBD;
   transition: transform .5s; /* Animation */
   height:600px
@@ -105,7 +105,7 @@ font-family: viroFont, script, montserrat, century gothic , sans-serif;
 
 .zoom:hover {
   transform: scale(2); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
-  padding-left:70px;
+  padding-left:55px;
 }
 
 }
