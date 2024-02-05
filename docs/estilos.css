@@ -182,16 +182,17 @@ img.custom:focus {
 }
 
 .zoom {
-  padding: 0px;
-  background-color: black;
+  padding-left: 30px;
+  background-color: #BBBDBD;
   transition: transform .5s; /* Animation */
-  width: auto;
-  height: auto;
+  width: 30%;
+  height:600px
   margin: 0 auto;
 }
 
 .zoom:hover {
-  transform: scale(1.65); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  transform: scale(1.8); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  padding-left:50px;
 }
 
 .zoom1 {
@@ -199,7 +200,6 @@ img.custom:focus {
   padding-right:15%;
   background-color: #222222;
   transition: transform .5s; /* Animation */
-  width: 70%;
   margin: auto;
 }
 
@@ -264,10 +264,10 @@ width:100%;
 
 
 #kmvs {
-width:100%;
-float:center;
+width:30%;
+float:left;
 margin:0 20px 0 0 ;
-border: 2px solid white;
+border: 0px solid white;
 clear:right;
 }
 
