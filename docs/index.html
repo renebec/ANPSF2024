@@ -17,11 +17,11 @@
 
         <p style="background-color:#607760; text-align:center;padding:1.5%;">
         <text class="rotul" >
-            Science, Research, Tech & Development
+            Science, Tech, Research & Sharing
         </text>
             </p>
             <text style="color:#807760;font-size:14px;position:absolute;
-            padding:10px">Año 2024 &emsp;&emsp;Ciencia, Investigación, Tecnología y Desarrollo</text>
+            padding:10px">Año 2024 &emsp;&emsp;Science, Tech, Research & Sharing</text>
             </div>
         <!-- color pink-peach fluorescent ==#FF7750 it's background == #807760 -->
 
@@ -36,7 +36,7 @@
             M.C. Héctor René Becerril Cejudo
         </text><br>
         <text class="autor" style="color:#857040">
-            03 de febrero de 2024
+            03 de abril de 2024
         </text>
         <br>
         <br>
@@ -470,7 +470,7 @@
 
         <header>
     <h3>
-        4. Cálculo de índices de vegetación
+        4. Índices de vegetación
     </h3>
     </header>
     <section>
@@ -483,13 +483,8 @@
             reflectance of light spectra from plants changes with plant type, water content within
         tissues, and other intrinsic factors. <a href="https://www.hindawi.com/journals/js/2017/1353691/" target="_blank" >[10]&#128072;
         </a>
-
-        The <b>NDVI</b> is a dimensionless index that
-        monitors vegetation dynamic by
-            computing the difference between visible and near-infrared reflectance to estimate the
-        concentration of greens vegetation in a particular area (Weier & Herring, 2000).
-            <a href="ttps://www.sciencedirect.com/topics/earth-and-planetary-sciences/vegetation-index" target="_blank" >[11]&#128072;
-        </a>
+        <br>
+        <br>
         The main applications for remote sensing of vegetation are based
             on the following
             light spectra: (i) the ultraviolet region (UV), which goes from 10 to 0.38 &micro; (ii) the
@@ -500,28 +495,35 @@
 
         <br>
         <br>
-        Con los datos de la banda <b>4</b> (0.6646 &micro;), <b>8</b> (0.8328 &micro;) y <b>11</b> (1.6137 &micro;)
+        The <b>NDVI</b> is a dimensionless index that
+        monitors vegetation dynamic by
+            computing the difference between visible and near-infrared reflectance to estimate the
+        concentration of greens vegetation in a particular area (Weier & Herring, 2000).
+            <a href="ttps://www.sciencedirect.com/topics/earth-and-planetary-sciences/vegetation-index" target="_blank" >[11]&#128072;
+        </a>
+        <br>
+        <br>
+        Con los datos de la banda <b>4</b> (0.6646 &micro;) y <b>8</b> (0.8328 &micro;)
         se generaron dos índices de vegetación: a) el índice de Vegetación de Diferencias Normalizado (<b>NDVI</b>) y
-        b) un Índice de Vigor Vegetal (<b>IVV</b>) que exprese
-        la presencia de vegetación vigorosa en función de su verdor y de su contenido de agua simultáneamente.
-        Los índices se construyeron utilizando las siguientes expresiones:
+        b) el Índice de Vegetación con Ajuste del Suelo (<b>SAVI</b>) que corrige los valores de reflectancia de
+        acuerdo al efecto del suelo. Los índices se construyeron utilizando las siguientes expresiones:
         <br>
         <br>
-        &emsp;<b>NDVI</b> = <i style="color:brown;font-weight:bold;">(n - r)</i> &divide; <i style="color:blue;font-weight:bold;">(n + r)</i>
+        &emsp;<b>NDVI</b> = <i style="color:brown;font-weight:bold;">( n - r )</i> &divide; <i style="color:blue;font-weight:bold;">( n + r )</i>
         <br>
         <br>
-        &emsp;<b>IVV</b> =  <i style="color:brown;font-weight:bold;">(n - r) s*&radic;s + 0.3275</i> &divide; <i style="color:blue;font-weight:bold;">(n + r) s^2 - 1.422576</i>
+        &emsp;<b>SAVI</b> =  <i style="color:brown;font-weight:bold;">( n - r ) </i> &divide; <i style="color:blue;font-weight:bold;">[ ( n + r + 0.5 ) ( 1 + 0.5 ) ]</i>
         <br>
         <br>
         Donde:<br>
         n: banda infra-rojo cercano (b8).<br>
         r: banda rojo (b4)<br>
-        s: banda infra rojo (bs).
+        s: banda infra rojo (bs).<br>
         <br>
         <br>
-        La Figura 2 muestra la forma leptocúrtica de la distribución de
-        los valores del <b>NDVI</b>, en contraste con la mayor amplitud que se
-        observa en los valores del <b>IVV</b>.</b>
+        La Figura 2 muestra la forma de la distribución de
+        los valores del <b>NDVI</b>, en contraste con lo que se
+        observa en los valores del <b>SAVI</b>.</b>
         <br>
         <br>
         <br>
@@ -529,15 +531,12 @@
                 class="centerxx" height="350"
                 alt="index hist" ></iframe>
         <i style="color:#557090"> Figura 2. En color naranja podemos
-        observar el histograma con los datos del <b>IVV</b> con mayor amplitud y varianza
-        que el <b>NDVI</b> en color azul.</i>
+        observar el histograma con los datos del <b>SAVI</b> y en azul el histograma del <b>NDVI</b>.</i>
         <br>
         <br>
         <br>
-        La notoria diferencia en la distribución de los índices se manifiesta también en
-        una mayor facilidad para diferenciar el tipo de coberturas presentes en el territorio
-        observado. En la Figura 3 se muestran 4 firmas espectrales que
-        corresponden a 4 puntos geográficos en la zona de estudio:
+        Es notoria la diferencia en la distribución de los índices. En la Figura 3 se muestran 4 firmas
+        espectrales que corresponden a 4 puntos geográficos en la zona de estudio:
         <br>
         <br>
         &emsp;firma 1: vegetación arbórea en cañada.<br>
@@ -547,20 +546,21 @@
         <br>
         <br>
         Las firmas se construyeron con
-        los datos de las bandas 4, 8 y 11 del MSI y, se agrega en la misma gráfica los valores
-        del <b>NDVI</b> así como del <b>IVV</b>. Se observa que los valores del <b>NDVI</b> de las
-        firmas 1 y 3 se encuentran más cercanos al valor <b>NDVI</b> de la firma 4. En contraste,
+        los datos de las bandas 4 y 8 del MSI y en la Figura 3 se muestran los valores de las bandas y
+        se agregaron en la misma gráfica los valores generados
+        en el <b>NDVI</b> así como en el <b>SAVI</b>. <!--Se observa que los valores del <b>NDVI</b> de las
+        firmas 1 y 3 se parecen al valor <b>NDVI</b> de la firma 4. En contraste,
         los valores del <b>IVV</b> permiten discriminar mejor la cobertura de la
         firma 4 (que corresponde a pastizal-suelo desnudo) del resto de firmas que si presentan vegetación
-        arbórea con algún nivel de verdor y humedad.
+        arbórea con algún nivel de verdor y humedad.-->
         <br>
         <br>
         <br>
         <iframe src="https://renebec.github.io/plotLineSpectrumSample3/"
         class="centerxx" width="100%" height="300px" title="Spectral Signatures Samples & index values" ></iframe>
         <img class="zoom2" src="plotSignaturesSample3.png" width="100%"  alt="signatures & index values" >
-        <i style="color:#557090"> Figura 3. Los valores del <b>IVV</b> permiten diferenciar mejor aquellas
-            coberturas vegetales de las de suelo desnudo y pastizal.</i>
+        <i style="color:#557090"> Figura 3. Los valores del <b>SAVI</b> parece que permiten diferenciar mejor aquellas
+            coberturas vegetales localizadas en las zonas de suelo desnudo y pastizal.</i>
         <br>
         <br>
         <br>
@@ -635,12 +635,12 @@
            Una vez procesados los datos de radiación registrados desde la plataforma
         satelital Sentinel 2 a través del sensor MSI, se realizaron dos procesos de
         clasificación no supervisada, el primero sobre la <b>imagen NDVI</b> y otro sobre
-        la <b>imgen IVV</b> obteniendo como resultado
+        la <b>imgen SAVI</b> obteniendo como resultado
         dos imágenes clasificadas:
         <br>
         <br>
         &emsp;&emsp;a) <b>clases NDVI</b><br>
-        &emsp;&emsp;b) <b>clases IVV</b>
+        &emsp;&emsp;b) <b>clases SAVI</b>
         <br>
         <br>
         En el proceso se utilizó el
@@ -648,7 +648,7 @@
         a continuación se describen:
         <br>
         <br>
-        &emsp;&emsp;Número de clases: 3<br>
+        &emsp;&emsp;Número de clases: 5<br>
         &emsp;&emsp;Iteraciones: 50<br>
         <br>
         <br>
@@ -668,9 +668,9 @@
         <br>
         <br>
         La descripción de las clases obtenidas se muestran en la Tabla 5.
-        Las cinco clases representan distintos tipos de cobertura vegetal en función del <b>vigor vegetal</b>
-        relacionado con el verdor y con el contenido de humedad en la planta, aspectos que se expresan a
-        través de la relaciones entre las bandas 4, 8 y 11.
+        Las cinco clases representan distintos tipos de cobertura vegetal en función del <b>verdor vegetal</b>,
+        aspecto que se expresa a
+        través de la relación entre las bandas 4 y 8.
         <br>
         <br>
         <br>
@@ -682,12 +682,12 @@
 
                     <thead style="background-color:#66C802;color:white">
 
-                        <tr style="background:green3;"><th class="word"> Clase</th> <th class="meaning" colspan="2">Conteo<br>NDVI - IVV</th><th class="meaning">Descripción</th></tr></thead>
-                        <tr style="text-align:left;color:black;"><td align="center">PTZ</td><td align="center">190,071</td><td align="center">131,281</td><td align="center">Pastizal</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">PTZ-MAT</td><td align="center">401,025</td><td align="center">281,435</td><td align="center">Paztizal-matorral</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">MAT</td><td align="center">349,583</td><td align="center">337,393</td><td align="center">Matorral</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">BQE</td><td align="center">159,918</td><td align="center">264,003</td><td align="center">Bosque</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">BQH</td><td align="center">50,451</td><td align="center">136,936</td><td align="center">Bosque húmedo</td></tr>
+                        <tr style="background:green3;"><th class="word"> Clase</th> <th class="meaning" colspan="2">Conteo<br>NDVI - SAVI</th><th class="meaning">Descripción</th></tr></thead>
+                        <tr style="text-align:left;color:black;"><td align="center">PTZ</td><td align="center">191,039</td><td align="center">183,833</td><td align="center">Pastizal</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">PTZ-MAT</td><td align="center">390,908</td><td align="center">341,459</td><td align="center">Paztizal-matorral</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">MAT</td><td align="center">354,135</td><td align="center">315,798</td><td align="center">Matorral</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">BQE</td><td align="center">165,616</td><td align="center">227,864</td><td align="center">Bosque</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">BQH</td><td align="center">49,350</td><td align="center">82,094</td><td align="center">Bosque húmedo</td></tr>
         </table>
         <br>
         <br>
@@ -705,19 +705,19 @@
 
                     <thead style="background-color:#66C802;color:white">
 
-                        <tr style="background:green3;"><th class="word"> Clase</th> <th class="meaning" colspan="2">NDVI<br>media-desv</th><th class="meaning" colspan="2">IVV<br>media-desv</th></tr></thead>
-                        <tr style="text-align:left;color:black;"><td align="center">PTZ</td><td align="center">0.1113</td><td align="center">0.0144</td><td align="center">0.3212</td><td align="center">0.0286</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">PTZ-MAT</td><td align="center">0.1415</td><td align="center">0.0080</td><td align="center">0.3959</td><td align="center">0.0184</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">MAT</td><td align="center">0.1683</td><td align="center">0.0086</td><td align="center">0.4531</td><td align="center">0.0166</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">BQE</td><td align="center">0.2036</td><td align="center">0.0126</td><td align="center">0.5128</td><td align="center">0.0185</td></tr>
-                        <tr style="text-align:left;color:black;"><td align="center">BQH</td><td align="center">0.2600</td><td align="center">0.0259</td><td align="center">0.5830</td><td align="center">0.0298</td></tr>
+                        <tr style="background:green3;"><th class="word"> Clase</th> <th class="meaning" colspan="2">NDVI<br>media-desv</th><th class="meaning" colspan="2">SAVI<br>media-desv</th></tr></thead>
+                        <tr style="text-align:left;color:black;"><td align="center">PTZ</td><td align="center">0.1095</td><td align="center">0.0143</td><td align="center">-0.0621</td><td align="center">0.0067</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">PTZ-MAT</td><td align="center">0.1401</td><td align="center">0.0081</td><td align="center">-0.0452</td><td align="center">0.0045</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">MAT</td><td align="center">0.1671</td><td align="center">0.0086</td><td align="center">-0.0300</td><td align="center">0.0046</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">BQE</td><td align="center">0.2017</td><td align="center">0.0125</td><td align="center">-0.0127</td><td align="center">0.0055</td></tr>
+                        <tr style="text-align:left;color:black;"><td align="center">BQH</td><td align="center">0.2580</td><td align="center">0.0261</td><td align="center">0.0099</td><td align="center">0.0105</td></tr>
         </table>
         <br>
         <br>
         <br>
-        Se observa una mayor amplitud en los valores del IVV con respecto al NDVI, así como también una
-            mayor varianza como resultado de introducir la información de la banda 11 y por la
-            relación que tiene la presencia de humedad con la información de la banda 4 y 8.
+        Se observa un comportamiento más acotado en los valores del SAVI con respecto al NDVI, así
+        como también una
+            menor varianza.
 
         <br>
         <br>
@@ -725,7 +725,7 @@
 
          Notamos que el conteo de pixeles identificados en cada clase difiere notablemente
             en los resultados de la clasificación a partir del <b>NDVI</b> y del
-            <b>IVV</b>. En la clasificación <b>NDVI</b> hay un mayor conteo de
+            <b>SAVI</b>. En la clasificación <b>NDVI</b> hay un mayor conteo de
             pixeles en la categoría de <b>Pastizal</b> y un menor conteo en la
             categoría de <b>Bosque vigor 2</b>. Lo anterior podemos observarlo con
             claridad en la Figura 6.
@@ -734,19 +734,19 @@
         <br>
         <img class="zoom" src="kmvs.png"  id="kmvs"
         <caption style="caption-side:bottom"><i style="color:#557090;">Fig 6. Clasificación obtenida a partir del índice <b>NDVI</b>
-                (arriba); clasificación a partir del <b>IVV</b> (abajo);
+                (arriba); clasificación a partir del <b>SAVI</b> (abajo);
                 Al centro se muestra la composición multibanda en RGB (11,8,3)
                 de la imagen satelital Sentinel-2.</i></caption><br>
 
         <br>
         <br>
             En un primer análisis visual fotointerpretativo, los resultados de
-            la clasificación hecha sobre el <b>IVV</b> parecen describir mejor
+            la clasificación hecha sobre el <b>SAVI</b> parecen describir mejor
             las coberturas vegetales presentes en la zona de estudio. La clasificación
             <b>NDVI</b> detecta una mayor
             cantidad de pixeles dentro de las categorías de menor vigor, mientras
             que clasifica muy pocas zonas como <b>Bosque húmedo</b>. En contraste,
-            la clasificación <b>IVV</b> clasifica una mayor cantidad de pixeles en las
+            la clasificación <b>SAVI</b> clasifica una mayor cantidad de pixeles en las
             categorías de vegetación con mayor vigor.
             <br>
             <br>
@@ -944,8 +944,8 @@
         <br>
         <br>
         Se desarrolló un modelo de regresión múltiple donde la variable respuesta es continua
-        a partir de la información del índice de vigor vegetal (ivv). Del mismo modo se usaron dos
-        variables predictivas continuas: pendiente (slope) y aspecto del terreno.
+        a partir de la información del índice con Ajuste de Suelo (SAVI). Del mismo modo se usaron dos
+        variables predictivas continuas: pendiente (slope) y orientación del terreno (aspect).
         En la Figura 8 se muestra la superficie de respuesta para el modelo
         de regresión lineal múltiple:
             <br>
@@ -1039,7 +1039,7 @@
     </h3>
     </header>
     <section>
-           Para esta sección cabe mencionar que
+           
         <span id="dots8">...</span><span id="more8">
         <br><p style="font-size:60px;background-color:black;"><b style="color:red;">&#128679;estamos trabajando&#128679;</b>.
         &#128515;</p>
