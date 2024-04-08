@@ -175,6 +175,11 @@ function PopWinFig01()
     window.open("popFig01.html","width=100%", "_self", "resizable=yes", params);
 }
 
+function PopWinFig02()
+{
+    window.open("popFig02.html","width=100%", "_self", "resizable=yes", params);
+}
+
 function PopWinFig03()
 {
     window.open("popFig03.html","width=100%", "_self", "resizable=yes", params);
