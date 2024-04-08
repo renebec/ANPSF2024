@@ -161,3 +161,26 @@ function myFunction8() {
     moreText8.style.display = "inline";
   }
 }
+
+var params = [
+    'height='+screen.height,
+    'width='+screen.width,
+    'fullscreen=yes' // only works in IE, but here for completeness
+].join(',');
+     // and any other options from
+     // https://developer.mozilla.org/en/DOM/window.open
+
+function PopWinFig01()
+{
+    window.open("popFig01.html","width=100%", "_self", "resizable=yes", params);
+}
+
+function PopWinFig03()
+{
+    window.open("popFig03.html","width=100%", "_self", "resizable=yes", params);
+}
+
+function PopWinFig05()
+{
+    window.open("popFig05.html","width=100%", "_self", "resizable=yes", params);
+}

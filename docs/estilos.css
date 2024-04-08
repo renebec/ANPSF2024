@@ -301,11 +301,18 @@ img.custom:focus {
   word-break:break-all;
 }
 
-.centerx{
+.centerr{
 display:block;
 margin-left:auto;
 margin-right:auto;
 width:50%;
+}
+
+.centerx{
+display:block;
+margin-left:auto;
+margin-right:auto;
+width:70%;
 }
 
 .centerxx{
@@ -343,7 +350,7 @@ background:lightgoldenrodyellow
 #more8 {display: none;background:#BBBDBD}
 
 button{
-background:purple;
+background:#FF4025;
 color:white;
 }
 
@@ -356,3 +363,11 @@ color:beige;
 .alert alert-success{
 background:red;
 }
+
+
+.boton{
+    width:200px;
+    font-size:14px;
+    background-color:#993699;
+    color:#108080;
+    }
