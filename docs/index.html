@@ -416,8 +416,9 @@
         <br>
         <br>
         <br>
-        Como resultado se obtuvo una imagen mejorada, sin sombras por topografía y con mejor contraste
-        entre las coberturas presentes en la escena como se puede observar en la Figura 1.
+        Como resultado se obtuvo una imagen mejorada, con una reducción notoria de sombras por efecto
+        de la topografía y con mejor contraste
+        entre las coberturas presentes en la escena (Figura 1).
         <br>
         <br>
         <br>
@@ -471,7 +472,8 @@
                 allowfullscreen></iframe>
         </iframe>
         <caption><i style="color:#557090;">En el vídeo observamos una escena registrada por el satélite
-            Sentinel-2 en diferentes composiciones de bandas o segmentos del espectro electromagnético
+            Sentinel-2. Las imágenes se generaron en diferentes composiciones de bandas o segmentos del
+            espectro electromagnético uqe van
             desde el visible hasta
             el infra-rojo de onda corta.</i></caption>
         <!--?playlist=tgbNymZ7vqY&loop=1-->
@@ -542,8 +544,8 @@
         <img src="index density & scatter.png"
                 class="centerxx" width="100%"
                 alt="index hist">
-        <i style="color:#557090"> Figura 2. En la Figura podemos observar el contraste entre la
-            distribución del <b>SAVI</b> y del <b>NDVI</b>.
+        <i style="color:#557090"> Figura 2. Se observa el contraste entre la
+            distribución de los datos del <b>SAVI</b> y del <b>NDVI</b>.
         &emsp;<a onclick="PopWinFig02()">
                                 <button onclick="PopWinFig02()"
                                 style="font-weight:bold;color:white;width:100px" class="boton">
@@ -551,8 +553,9 @@
         <br>
         <br>
         <br>
-        Es notoria la diferencia en la distribución de los índices. En la Figura 3 se muestran 4 firmas
-        espectrales que corresponden a 4 puntos geográficos en la zona de estudio:
+        Es notoria la diferencia en la distribución de los datos de los índices, así como su
+        respuesta en las firmas espectrales generadas. En la Figura 3 se
+        muestran 4 firmas espectrales que corresponden a 4 puntos geográficos dentro de la zona de estudio:
         <br>
         <br>
         &emsp;firma 1 (azul): pastizal.<br>
@@ -561,9 +564,9 @@
         &emsp;firma 4 (rojo): bosque verde en cañada.
         <br>
         <br>
-        En la Figura 3 se muestran las firmas espectrales que se construyeron con
-        los datos de las bandas 4 y 8 del MSI y se muestran también los valores
-        del <b>NDVI</b> así como del <b>SAVI</b>. <!--Se observa que los valores del <b>NDVI</b> de las
+        En la Figura 3 se muestran cuatro firmas espectrales que se construyeron con
+        los datos de las bandas 4 y 8 del MSI y con los valores
+        del <b>NDVI</b> y del <b>SAVI</b>. <!--Se observa que los valores del <b>NDVI</b> de las
         firmas 1 y 3 se parecen al valor <b>NDVI</b> de la firma 4. En contraste,
         los valores del <b>IVV</b> permiten discriminar mejor la cobertura de la
         firma 4 (que corresponde a pastizal-suelo desnudo) del resto de firmas que si presentan vegetación
@@ -574,7 +577,7 @@
         <iframe src="https://renebec.github.io/plotLineSpectrumSample3/"
         class="centerxx" width="100%" height="300px" title="Spectral Signatures Samples & index values" ></iframe>
         <img class="centerr" src="plotSignaturesSample3.png" width="100%"  alt="signatures & index values" >
-        <i style="color:#557090;" > Figura 3. Los valores del <b>SAVI</b> parece que permiten discriminar mejor aquellas
+        <i style="color:#557090;" > Figura 3. Los valores del <b>SAVI</b> al parecer discriminan mejor aquellas
             coberturas localizadas en zonas de poca vegetación (firmas 1 y 3), diferenciándolas de aquellas coberturas
             en zonas de mayor cobertura forestal (firmas 2 y 4).&nbsp;<a onclick="PopWinFig03()">
                                 <button onclick="PopWinFig03()"
@@ -629,14 +632,16 @@
             Clasificación k-means
         </h4>
          Se trata de un algoritmo de clasificación iterativo en el que se definen n
-        clases dentro de las que serán categorizados los elementos de un conjunto de observaciones. El
-        mecanismo del <span id="dots6">...</span><span id="more6">algoritmo consiste en asignar n centroides aleatorios dentro del espacio muestral.
-        Posteriormente se miden las
-        "distancias" entre cada centroide y los puntos más cercanos de cada centroide, hecho esto,
-        el algoritmo recalcula la posición de cada centroide en función de las distancias promedio y
-        vuelve a calcular las distancias a los puntos desde la nueva posición de los centroides. Este
+        clases dentro de las que serán categorizados los elementos de un conjunto ubicados en un
+        espacio vectorial. El mecanismo del <span id="dots6">...</span><span id="more6">algoritmo consiste
+        en crear n centroides aleatorios dentro del espacio muestral.
+        Posteriormente el algoritmo mide las
+        "distancias" entre cada centroide y los elementos más cercanos detectados en el espacio vectorial, hecho esto,
+        el algoritmo recalcula la posición de cada centroide y los traslada a una posición promedio con respecto a
+        los puntos más cercanos y, una vez más,
+        recalcula las distancias a los puntos desde la nueva posición de los centroides. Este
         proceso se repite de manera iterativa hasta que las posiciones de los centroides se estabilizan
-        y los puntos dejan de cambiar de centroide como se muestra en la animación de la Figura 4.
+        y los centroides dejan de ajustarse como se muestra en la animación de la Figura 4.
         <br>
 
         <!---<p style="text-align:center;"><iframe src="https://media.licdn.com/dms/image/C5612AQH8kEizAouznA/article-cover_image-shrink_600_2000/0/1626424726069?e=2147483647&v=beta&t=deUL_yPDFPXK8dkspX2oJZWX1qqyx3XBokl02TN8x9k"
@@ -650,9 +655,9 @@
         <br>
         <br>
         <br>
-           Una vez procesados los datos del sensor MSI, se realizaron dos procesos de
+           Con los datos del sensor MSI se realizaron dos procesos de
         clasificación no supervisada, el primero sobre la <b>imagen NDVI</b> y otro sobre
-        la <b>imgen SAVI</b> obteniendo como resultado
+        la <b>imgen SAVI</b> de lo que se obtuvieron
         dos imágenes clasificadas:
         <br>
         <br>
@@ -687,7 +692,8 @@
         La descripción de las clases obtenidas se muestran en la Tabla 5, donde podemos observar el conteo
         de pixeles que fueron asignados en cada una de las cinco clases o categorías.
         Las cinco clases representan distintos tipos de cobertura vegetal en función del <b>verdor vegetal</b>
-        expresado a través de la relación entre las bandas 4 y 8.
+        expresado a través de los índices de vegetación construidos a partir de la relación entre las
+        bandas 4 (664.6 nm) y 8 (832.8 nm).
         <br>
         <br>
         <br>
@@ -732,9 +738,8 @@
         <br>
         <br>
         <br>
-        Se observa un comportamiento más acotado en los valores del SAVI con respecto al NDVI, así
-        como también una
-            menor varianza.
+        Se observa una menor amplitud en los valores del SAVI con respecto al NDVI, así
+        como también una menor desviación con respecto a la media.
 
         <br>
         <br>
@@ -745,9 +750,7 @@
             <b>SAVI</b>. En la clasificación <b>SAVI</b> hay un mayor conteo de
             pixeles en las categorías <b>Bosque Mixto</b> y <b>Bosque Verde</b> y en contraste
         se observa un menor conteo de pixeles en las
-            categorías <b>Matorral, Pastizal-Matorral</b> y <b>Pastizal</b>. Lo anterior podemos
-        observarlo con
-            claridad en la Figura 5.
+            categorías <b>Matorral, Pastizal-Matorral</b> y <b>Pastizal</b> (Figura 5).
             <br>
             <br>
         <br>
@@ -755,8 +758,8 @@
         <caption style="caption-side:bottom"><i style="color:#557090;">Fig 5. Clasificación obtenida a partir del índice <b>NDVI</b>
                 (izquierda); clasificación a partir del <b>SAVI</b> (derecha);
                 al centro se muestra la composición multibanda en RGB (11,8,3)
-                de la imagen satelital Sentinel-2. Los circulos indican zonas de pastizal que
-        fueron mejor discriminadas en la clasificación a partir del <b>SAVI</b>. </caption>&emsp;<a onclick="PopWinFig05()">
+                de la imagen obtenida por Sentinel-2. Los círculos indican zonas de pastizal que
+        fueron mejor clasificadas a partir del <b>SAVI</b>. </caption>&emsp;<a onclick="PopWinFig05()">
                                 <button onclick="PopWinFig05()"
                                 style="font-weight:bold;color:white;width:100px" class="boton">
                     &#128073; ver </button></a></i><br>
@@ -818,12 +821,15 @@
         <br>
         <br>
 
-        <br><p style="font-size:60px;background-color:black;"><b style="color:red;">&#128679;estamos trabajando&#128679;</b>.
+        <br><p style="font-size:60px;background-color:black;"><b style="color:red;">&#128679;en construcción&#128679;</b>.
         &#128515;</p>
         <br>
         <br>
         <h4>
             Georreferenciación de imágenes.
+        </h4>
+        <h4>
+            Estimación del Índice de Área Foliar.
         </h4>
 
         <br>
@@ -851,8 +857,8 @@
                 frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                 allowfullscreen ></iframe>
         </iframe>
-        <caption><i style="color:#557090;">En el vídeo se observa un paneo sobre una imagen del Componente Principal 1 (PC1)
-            extraído de una fotografía RGB registrada por un dron. La imagen nos permite ditinguir en tonos de gris diferentes
+        <caption><i style="color:#557090;">En el vídeo se observa un paneo sobre la imagen del Componente Principal 1 (PC-1)
+            extraído de una fotografía RGB registrada por un dron. La imagen nos permite distinguir en tonos de gris diferentes
             tipos de cobertura que se presentan en la zona de estudio. Las zonas más oscuras representan zonas de
         intenso verdor vegetal mientras que las zonas en color blanco corresponden a suelo desnudo y roca.</i></caption>
         <br>
@@ -868,13 +874,15 @@
     </h3>
     </header>
     <section>
-        Los resultados que se muestran en estos momentos son preliminares, no son concluyentes
-        y se correran nuevamente los modelos aquí propuestos para confirmar resultados.
+        Los resultados que se muestran en estos momentos son preliminares.
         <span id="dots7">...</span><span id="more7">
 
-        <p style="font-size:60px;background-color:black;"><b style="color:red;">&#128679;estamos trabajando&#128679;</b>.
+        <p style="font-size:60px;background-color:black;"><b style="color:red;">&#128679;en construcción&#128679;</b>.
         &#128515;</p>
         <br>
+        Nota: se trabajó con los datos del SAVI y de la clasificación realizada sobre éste mismo
+        índice debido a que presenta una mejor discriminación de coberturas y principalmente
+        en aquellas zonas de escasa vegetación.
         Se aplicaron dos métodos de regresión: a) <b>regresión logística multinomial</b> y b)
         <b>regresión lineal múltiple</b>. Se utilizó la
         información raster topográfica de la zona de estudio (aspecto y pendiente) así como la
@@ -892,12 +900,13 @@
         <br>
         El análisis de regresión logística multinomial trabaja sobre
 
-        una variable respuesta o dependiente de naturaleza categórica (clases obtenidas
-        a partir del SAVI) y, para este caso,
+        una variable respuesta de naturaleza categórica que en este caso
+        corresponden a las clases obtenidas
+        a partir de la clasificación k-means sobre el SAVI; y se cuenta además
         con tres variabes predictivas: dos continuas (altitud y pendiente) y otra categórica (orientación).
         La variable <b>orientación</b> se particionó en 5 categorías: Norte, Sur, Este, Oeste y
         Plano. El análisis
-        busca detectar si es que existe alguna influencia significativa de las variables topográficas
+        busca medir alguna influencia significativa de las variables topográficas predictivas
         sobre la distribución de las clases de vegetación.
         <br>
         <br>
@@ -955,7 +964,7 @@
         <br>
         <br>
         <br>
-        En la Figura 7 se puede observar que la probabilidad de ocurrencia cambia con la altitud;
+        En la Figura 6 se puede observar que la probabilidad de ocurrencia cambia con la altitud;
         el <b>BQM</b> y el <b>BQV</b>
         se incrementa con el aumento en los valores de la pendiente y es ligeramente superior en orientación
         Norte. La vegetación de <b>PTZ-MAT</b> presenta probabilidades de ocurrencia
@@ -970,7 +979,7 @@
         <img class="gif" src="plot-prob-alt3.gif" >
      <!--   <img class = "zoom3" src="plot_prob_logit.png" width="100%" alt="gráfica de probabilidades">--><br>
         <i style="color:#557090;">Fig 6. Probabilidades de ocurrencia de las diferentes clases de vegetación
-            para diferentes valores de la pendiente, altitud y de orientación
+            para diferentes valores de la pendiente, altitud y orientación
             del terreno.</i>.
         <br>
         <br>
@@ -979,23 +988,21 @@
         <br>
         <br>
         Se desarrolló un modelo de regresión múltiple donde la variable respuesta es continua
-        a partir de la información del índice con Ajuste de Suelo (SAVI). Del mismo modo se usaron dos
+        y corresponde al Índice de Vegetación con Ajuste de Suelo (SAVI). Del mismo modo se usaron dos
         variables predictivas continuas: pendiente (slope) y orientación del terreno (aspect).
-        En la Figura 8 se muestra la superficie de respuesta para el modelo
-        de regresión lineal múltiple:
             <br>
             <br>
             &emsp;&emsp;<i>savi ~ slope + aspect + (slope * aspect)</i>
         <br>
         <br>
         Donde:<br>
-        savi: es el índice con ajuste de suelo como la variable respuesta.<br>
+        savi: es el índice con ajuste de suelo (variable respuesta).<br>
         slope: es el porcentaje de pendiente del terreno que va de 0 a 60.<br>
         aspect: es la orientación del terreno que va de 0 = Norte hasta 180 = Sur.
         <br>
         <br>
         <br>
-        <i style="color:#557090;">Tabla 7. Resultados del modelo de regresión lineal.</i>
+        <i style="color:#557090;">Tabla 7. Resultados del modelo de regresión lineal múltiple.</i>
             <br>
             <br>
 
@@ -1026,23 +1033,24 @@
         &emsp;&emsp;s = -4.139<sup>-2</sup> + (9.297<sup>-4</sup> x<sub>1</sub>) + (-1.116<sup>-4</sup> x<sub>2</sub>) + (-6.626<sup>-6</sup> x<sub>1</sub><sup>2</sup>) + (4.103<sup>-7</sup> x<sub>2</sub><sup>2</sup>) + (-8.210<sup>-7</sup> x<sub>1</sub> x<sub>2</sub>)
         <br>
         <br>
-        La superficie de respuesta de
-        la Figura 8 muestra la respuesta del SAVI hacia la orientación y la pendiente. Los valores pequeños
-        de la pendiente generan valores bajos de respuesta de la vegetación a través de los diferentes ángulos
+        La Figura 8 muestra la respuesta del SAVI con respecto a la orientación y la pendiente. Los
+        valores pequeños
+        de la pendiente corresponden a valores bajos de respuesta de la vegetación a través de los
+        diferentes ángulos
         de orientación del terreno;
-        en contraste, cuando los valores de la pendiente alcanzan los valores más altos se presenta
-        una respuesta superior de la vegetación y aún mayor hacia terrenos con orientación Norte.
+        en contraste, cuando los valores de la pendiente aumentan se presenta
+        una respuesta superior de la vegetación y aún ligeramente mayor hacia terrenos con orientación Norte.
         <br>
         <br>
         <br>
         <iframe src="https://renebec.github.io/linearMult3D/"
         style="width:100%;height:500px;" title="3D surface response"></iframe>
-        <i style="color:#557090;">Fig 7. Gráfica interactiva. Superficie de respuesta de la
-        regresión lineal múltiple. La altura de la superficie representa el valor del SAVI,
-            el eje <b>x</b> representa los valores de la pendiente;
+        <i style="color:#557090;">Fig 7. Gráfica interactiva. Superficie de respuesta donde se observa la
+            interacción de la pendiente y la orientación sobre la respuesta del SAVI.
+            El eje <b>x</b> representa los valores de la pendiente;
             el eje <b>y</b> representa los valores de orientación del terreno donde 0 indica la
             orientación Norte y 180 la orientación Sur. Se observa que el SAVI aumenta principalmente
-            con el aumento de la pendiente y ligeramwnte hacia la orientación Norte.</i>
+            con el aumento de la pendiente y ligeramente más hacia la orientación Norte.</i>
         <br>
         <br>
         <br>
@@ -1079,7 +1087,7 @@
     <section>
            
         <span id="dots8">...</span><span id="more8">
-        <br><p style="font-size:60px;background-color:black;"><b style="color:red;">&#128679;estamos trabajando&#128679;</b>.
+        <br><p style="font-size:60px;background-color:black;"><b style="color:red;">&#128679;en construcción&#128679;</b>.
         &#128515;</p>
         <br>
         <br>
