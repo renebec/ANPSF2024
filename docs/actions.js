@@ -170,6 +170,11 @@ var params = [
      // and any other options from
      // https://developer.mozilla.org/en/DOM/window.open
 
+function PopWinClose()
+{
+    window.close();
+}
+
 function PopWinFig01()
 {
     window.open("popFig01.html","width=100%", "_self", "resizable=yes", params);
